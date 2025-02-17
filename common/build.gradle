@@ -7,10 +7,6 @@ loom {
 }
 
 repositories {
-    maven { url = "https://libraries.minecraft.net"}
-    // maven for tterag
-    maven { url = "https://maven.tterrag.com" } // Registrate
-
     // mavens for Create Fabric and dependencies
     maven { url = "https://mvn.devos.one/releases" } // Porting Lib releases
     maven { url = "https://mvn.devos.one/snapshots" } // Create and several dependencies
@@ -27,7 +23,6 @@ repositories {
 
     maven { url = "https://api.modrinth.com/maven" } // LazyDFU
     maven { url = "https://maven.terraformersmc.com/releases" } // Mod Menu, EMI
-    mavenCentral()
 }
 
 dependencies {
@@ -40,14 +35,4 @@ dependencies {
     // All dependencies except Flywheel and Registrate are NOT safe to use!
     // Flywheel and Registrate must also be used carefully due to differences across loaders.
     modCompileOnly("com.simibubi.create:create-fabric-$minecraft_version:$create_fabric_version")
-
-    // Minecraft
-    implementation "net.minecraft:client:1.20.1"
-    implementation "net.minecraft:server:1.20.1"
-
-    // Create Mod
-    implementation "com.simibubi.create:create-fabric-${minecraft_version}:${create_fabric_version}"
-
-    // Registrate
-    implementation "com.tterrag.registrate:Registrate:${registrate_version}"
 }
