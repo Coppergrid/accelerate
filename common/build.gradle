@@ -3,10 +3,11 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/examplemod.accesswidener")
+    accessWidenerPath = file("src/main/resources/createmaglev.accesswidener")
 }
 
 repositories {
+    maven { url = "https://libraries.minecraft.net"}
     // maven for tterag
     maven { url = "https://maven.tterrag.com" } // Registrate
 
@@ -26,6 +27,7 @@ repositories {
 
     maven { url = "https://api.modrinth.com/maven" } // LazyDFU
     maven { url = "https://maven.terraformersmc.com/releases" } // Mod Menu, EMI
+    mavenCentral()
 }
 
 dependencies {
@@ -47,5 +49,5 @@ dependencies {
     implementation "com.simibubi.create:create-fabric-${minecraft_version}:${create_fabric_version}"
 
     // Registrate
-    implementation "com.tterrag.registrate:registrate:MC${minecraft_version}-${registrate_version}"
+    implementation "com.tterrag.registrate:Registrate:${registrate_version}"
 }
