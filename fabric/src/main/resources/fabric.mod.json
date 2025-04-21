@@ -5,14 +5,14 @@
   "name": "Create: Maglev",
   "description": "Create: Maglev is an addon for create that adds a new type of rail, maglev, which allows for higher speeds than normal tracks.",
   "authors": [
-    "Me!"
+    "OneLink"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-  "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
+  "license": "CC BY-NC-SA 4.0",
+  "icon": "assets/createmaglev/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [

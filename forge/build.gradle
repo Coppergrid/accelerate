@@ -63,8 +63,8 @@ processResources {
 loom {
     forge {
         mixinConfig(
-                "examplemod-common.mixins.json",
-                "examplemod.mixins.json"
+                "createmaglev-common.mixins.json",
+                "createmaglev.mixins.json"
         )
     }
 }
