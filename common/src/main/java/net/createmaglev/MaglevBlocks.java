@@ -8,6 +8,8 @@ import com.simibubi.create.AllTags.AllItemTags;
 import com.simibubi.create.content.trains.track.TrackMaterial;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.MapColor;
 import com.simibubi.create.content.trains.track.TrackBlock;
@@ -22,6 +24,18 @@ public class MaglevBlocks {
 			.lang("Maglev Track")
 			.item(TrackBlockItem::new)
 			.build()
+			.register();
+
+	public static final ItemEntry<Item> CHARGED_COBALT_MAGNET = REGISTRATE.item("charged_cobalt_magnet", Item::new)
+			.lang("Charged Cobalt Magnet")
+			.register();
+
+	public static final ItemEntry<Item> COBALT_INGOT = REGISTRATE.item("cobalt_ingot", Item::new)
+			.lang("Cobalt Ingot")
+			.register();
+
+	public static final ItemEntry<Item> RAW_COBALT = REGISTRATE.item("raw_cobalt", Item::new)
+			.lang("Raw Cobalt")
 			.register();
 
 	public static void init() {
