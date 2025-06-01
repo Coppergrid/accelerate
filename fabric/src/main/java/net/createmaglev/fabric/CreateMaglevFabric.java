@@ -2,6 +2,7 @@ package net.createmaglev.fabric;
 
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import net.createmaglev.MaglevBlocks;
+import net.createmaglev.MaglevItems;
 import net.createmaglev.CreateMaglev;
 import net.fabricmc.api.ModInitializer;
 
@@ -15,5 +16,6 @@ public class CreateMaglevFabric implements ModInitializer {
                 ), CreateMaglev.NAME);
         // on fabric, Registrates must be explicitly finalized and registered.
         MaglevBlocks.REGISTRATE.register();
+        MaglevItems.REGISTRATE.register();
     }
 }
