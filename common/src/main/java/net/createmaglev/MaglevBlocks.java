@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Block;
 public class MaglevBlocks {
 	public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(CreateMaglev.MOD_ID);
 
-	public static final BlockEntry<TrackBlock> MAGLEV_RAIL_BLOCK = REGISTRATE.block("maglev_rail", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), TrackMaterial.ANDESITE))
+	public static final BlockEntry<TrackBlock> MAGLEV_TRACK_BLOCK = REGISTRATE.block("maglev_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), TrackMaterial.ANDESITE))
 			.tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
 			.tag(AllBlockTags.TRACKS.tag)
 			.tag(AllBlockTags.GIRDABLE_TRACKS.tag)

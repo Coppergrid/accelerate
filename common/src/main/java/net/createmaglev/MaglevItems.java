@@ -7,6 +7,10 @@ import net.minecraft.world.item.Item;
 public class MaglevItems {
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(CreateMaglev.MOD_ID);
 
+    public static final ItemEntry<Item> MAGLEV_TRACK = REGISTRATE.item("maglev_track", Item::new)
+            .lang("Maglev Track")
+            .register();
+
     public static final ItemEntry<Item> COBALT_MAGNET = REGISTRATE.item("cobalt_magnet", Item::new)
             .lang("Cobalt Magnet")
             .register();
