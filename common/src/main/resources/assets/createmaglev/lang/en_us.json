@@ -2,5 +2,6 @@
   "block.createmaglev.maglev_track": "Maglev Track",
   "item.createmaglev.cobalt_magnet": "Cobalt Magnet",
   "item.createmaglev.cobalt_ingot": "Cobalt Ingot",
-  "item.createmaglev.raw_cobalt": "Raw Cobalt"
+  "item.createmaglev.raw_cobalt": "Raw Cobalt",
+  "createmaglev.creative_tab.main": "Create: Maglev"
 }

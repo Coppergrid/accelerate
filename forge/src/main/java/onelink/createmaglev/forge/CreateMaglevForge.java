@@ -12,6 +12,7 @@ public class CreateMaglevForge {
     public CreateMaglevForge() {
         // registrate must be given the mod event bus on forge before registration
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        MaglevCreativeTabsImpl.register(eventBus);
         MaglevBlocks.REGISTRATE.registerEventListeners(eventBus);
         MaglevItems.REGISTRATE.registerEventListeners(eventBus);
         CreateMaglev.init();
