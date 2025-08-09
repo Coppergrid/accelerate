@@ -1,4 +1,4 @@
-package net.createmaglev;
+package onelink.createmaglev;
 
 import com.simibubi.create.content.trains.track.TrackBlock;
 import com.simibubi.create.content.trains.track.TrackBlockItem;
@@ -15,8 +15,8 @@ public class MaglevBlocks {
 			.tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
 			.tag(AllBlockTags.TRACKS.tag)
 			.tag(AllBlockTags.GIRDABLE_TRACKS.tag)
-			.lang("Maglev Track")
 			.item(TrackBlockItem::new)
+            .lang("Maglev Track")
 			.build()
 			.register();
 

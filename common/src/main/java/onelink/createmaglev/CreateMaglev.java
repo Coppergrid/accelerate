@@ -1,4 +1,4 @@
-package net.createmaglev;
+package onelink.createmaglev;
 
 import com.simibubi.create.Create;
 import net.minecraft.resources.ResourceLocation;

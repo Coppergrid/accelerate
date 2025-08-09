@@ -1,6 +1,6 @@
-package net.createmaglev.mixin;
+package onelink.createmaglev.mixin;
 
-import net.createmaglev.CreateMaglev;
+import onelink.createmaglev.CreateMaglev;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

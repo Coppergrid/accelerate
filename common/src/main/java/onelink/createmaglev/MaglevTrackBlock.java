@@ -1,4 +1,4 @@
-package net.createmaglev;
+package onelink.createmaglev;
 
 import com.simibubi.create.content.trains.track.TrackBlock;
 import com.simibubi.create.content.trains.track.TrackMaterial;

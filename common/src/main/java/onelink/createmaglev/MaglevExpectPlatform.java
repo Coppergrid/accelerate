@@ -1,4 +1,4 @@
-package net.createmaglev;
+package onelink.createmaglev;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 

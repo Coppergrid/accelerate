@@ -1,8 +1,8 @@
-package net.createmaglev.forge;
+package onelink.createmaglev.forge;
 
-import net.createmaglev.MaglevBlocks;
-import net.createmaglev.MaglevItems;
-import net.createmaglev.CreateMaglev;
+import onelink.createmaglev.MaglevBlocks;
+import onelink.createmaglev.MaglevItems;
+import onelink.createmaglev.CreateMaglev;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;

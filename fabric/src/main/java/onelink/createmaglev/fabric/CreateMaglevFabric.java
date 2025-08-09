@@ -1,9 +1,9 @@
-package net.createmaglev.fabric;
+package onelink.createmaglev.fabric;
 
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
-import net.createmaglev.MaglevBlocks;
-import net.createmaglev.MaglevItems;
-import net.createmaglev.CreateMaglev;
+import onelink.createmaglev.MaglevBlocks;
+import onelink.createmaglev.MaglevItems;
+import onelink.createmaglev.CreateMaglev;
 import net.fabricmc.api.ModInitializer;
 
 public class CreateMaglevFabric implements ModInitializer {

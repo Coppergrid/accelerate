@@ -1,4 +1,4 @@
-package net.createmaglev.fabric;
+package onelink.createmaglev.fabric;
 
 import net.fabricmc.loader.api.FabricLoader;
 

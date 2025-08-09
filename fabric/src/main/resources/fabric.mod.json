@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.createmaglev.fabric.CreateMaglevFabric"
+      "onelink.createmaglev.fabric.CreateMaglevFabric"
     ]
   },
   "mixins": [

@@ -1,4 +1,4 @@
-package net.createmaglev.forge;
+package onelink.createmaglev.forge;
 
 public class MaglevExpectPlatformImpl {
 	public static String platformName() {
