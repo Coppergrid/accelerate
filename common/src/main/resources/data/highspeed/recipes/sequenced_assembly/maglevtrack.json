@@ -1,0 +1,102 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "highspeed:high_speed_track"
+  },
+  "loops": 2,
+  "results": [
+    {
+      "item": "highspeed:maglev_track"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "highspeed:incomplete_maglev_track"
+        },
+        [
+          {
+            "item": "minecraft:iron_block"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "item": "highspeed:incomplete_maglev_track"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "highspeed:incomplete_maglev_track"
+        },
+        [
+          {
+            "item": "highspeed:magnetized_cobalt_ingot"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "item": "highspeed:incomplete_maglev_track"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "highspeed:incomplete_maglev_track"
+        },
+        [
+          {
+            "item": "highspeed:magnetized_cobalt_ingot"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "item": "highspeed:incomplete_maglev_track"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "highspeed:incomplete_maglev_track"
+        },
+        [
+          {
+            "item": "minecraft:iron_block"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "item": "highspeed:incomplete_maglev_track"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "highspeed:incomplete_high_speed_track"
+        }
+      ],
+      "results": [
+        {
+          "item": "highspeed:incomplete_high_speed_track"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "highspeed:incomplete_high_speed_track"
+  }
+}
