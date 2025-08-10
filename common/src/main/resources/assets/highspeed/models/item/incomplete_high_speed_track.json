@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "highspeed:item/high_speed_track"
+    "layer0": "highspeed:item/incomplete_high_speed_track"
   }
 }
