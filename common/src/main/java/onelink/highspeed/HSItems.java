@@ -5,7 +5,7 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 
 public class HSItems {
-    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(HighSpeed.MOD_ID);
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(HighSpeed.MOD_ID).defaultCreativeTab(HSCreativeTabs.getBaseTab());
 
     public static final ItemEntry<Item> COBALT_MAGNET = REGISTRATE.item("cobalt_magnet", Item::new)
             .lang("Cobalt Magnet")
