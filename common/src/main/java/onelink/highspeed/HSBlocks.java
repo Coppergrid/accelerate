@@ -11,7 +11,16 @@ import net.minecraft.world.level.block.Block;
 public class HSBlocks {
 	public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(HighSpeed.MOD_ID).defaultCreativeTab(HSCreativeTabs.getBaseTab());
 
-	public static final BlockEntry<TrackBlock> MAGLEV_TRACK_BLOCK = REGISTRATE.block("maglev_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), TrackMaterial.ANDESITE))
+    public static final BlockEntry<TrackBlock> HIGHSPEED_TRACK_BLOCK = REGISTRATE.block("highspeed_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), TrackMaterial.ANDESITE))
+            .tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
+            .tag(AllBlockTags.TRACKS.tag)
+            .tag(AllBlockTags.GIRDABLE_TRACKS.tag)
+            .item(TrackBlockItem::new)
+            .lang("Highspeed Track")
+            .build()
+            .register();
+
+    public static final BlockEntry<TrackBlock> MAGLEV_TRACK_BLOCK = REGISTRATE.block("maglev_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), TrackMaterial.ANDESITE))
 			.tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
 			.tag(AllBlockTags.TRACKS.tag)
 			.tag(AllBlockTags.GIRDABLE_TRACKS.tag)
