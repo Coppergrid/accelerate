@@ -1,11 +1,11 @@
-package onelink.createmaglev;
+package onelink.highspeed;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 
-public class MaglevItems {
-    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(CreateMaglev.MOD_ID);
+public class HSItems {
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(HighSpeed.MOD_ID);
 
     public static final ItemEntry<Item> COBALT_MAGNET = REGISTRATE.item("cobalt_magnet", Item::new)
             .lang("Cobalt Magnet")
@@ -21,6 +21,6 @@ public class MaglevItems {
 
     public static void init() {
         // load the class and register everything
-        CreateMaglev.LOGGER.info("Registering items for " + CreateMaglev.NAME);
+        HighSpeed.LOGGER.info("Registering items for " + HighSpeed.NAME);
     }
 }

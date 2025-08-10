@@ -1,6 +1,6 @@
-package onelink.createmaglev.mixin;
+package onelink.highspeed.mixin;
 
-import onelink.createmaglev.CreateMaglev;
+import onelink.highspeed.HighSpeed;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MixinTitleScreen {
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {
-        CreateMaglev.LOGGER.info("Hello from {}!", CreateMaglev.class.getName());
+        HighSpeed.LOGGER.info("Hello from {}!", HighSpeed.class.getName());
     }
 }

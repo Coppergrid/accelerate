@@ -1,4 +1,4 @@
-package onelink.createmaglev.forge;
+package onelink.highspeed.forge;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -7,18 +7,18 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-import onelink.createmaglev.MaglevBlocks;
-import onelink.createmaglev.CreateMaglev;
+import onelink.highspeed.HSBlocks;
+import onelink.highspeed.HighSpeed;
 
-public class MaglevCreativeTabsImpl {
+public class HSCreativeTabsImpl {
     private static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateMaglev.MOD_ID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, HighSpeed.MOD_ID);
 
     private static final RegistryObject<CreativeModeTab> BASE_CREATIVE_TAB =
             CREATIVE_TABS.register("main", () ->
                     CreativeModeTab.builder()
-                            .title(Component.translatable(CreateMaglev.MOD_ID + "." + "creative_tab.main"))
-                            .icon(MaglevBlocks.MAGLEV_TRACK_BLOCK::asStack)
+                            .title(Component.translatable(HighSpeed.MOD_ID + "." + "creative_tab.main"))
+                            .icon(HSBlocks.MAGLEV_TRACK_BLOCK::asStack)
                             .build()
             );
 

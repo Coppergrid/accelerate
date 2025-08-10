@@ -1,8 +1,8 @@
-package onelink.createmaglev.fabric;
+package onelink.highspeed.fabric;
 
 import net.fabricmc.loader.api.FabricLoader;
 
-public class MaglevExpectPlatformImpl {
+public class HSExpectPlatformImpl {
 	public static String platformName() {
 		return FabricLoader.getInstance().isModLoaded("quilt_loader") ? "Quilt" : "Fabric";
 	}
