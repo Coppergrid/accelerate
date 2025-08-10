@@ -1,0 +1,23 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_copper"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:copper_nugget",
+      "count": 2
+    },
+    {
+      "item": "create:copper_nugget",
+      "count": 1,
+      "chance": 0.5
+    },
+    {
+      "item": "highspeed:raw_cobalt",
+      "chance": 0.1
+    }
+  ]
+}
