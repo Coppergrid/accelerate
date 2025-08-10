@@ -1,0 +1,66 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:track"
+  },
+  "loops": 3,
+  "results": [
+    {
+      "item": "highspeed:high_speed_track"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "highspeed:incomplete_high_speed_track"
+        },
+        [
+          {
+            "item": "minecraft:white_concrete"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "item": "highspeed:incomplete_high_speed_track"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "highspeed:incomplete_high_speed_track"
+        },
+        [
+          {
+            "item": "minecraft:iron_ingot"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "item": "highspeed:incomplete_high_speed_track"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "highspeed:incomplete_high_speed_track"
+        }
+      ],
+      "results": [
+        {
+          "item": "highspeed:incomplete_high_speed_track"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "highspeed:incomplete_high_speed_track"
+  }
+}

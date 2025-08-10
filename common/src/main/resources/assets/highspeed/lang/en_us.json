@@ -1,5 +1,8 @@
 {
+  "block.highspeed.high_speed_track": "High Speed Track",
   "block.highspeed.maglev_track": "Maglev Track",
+  "item.highspeed.incomplete_high_speed_track": "Incomplete High Speed Track",
+  "item.highspeed.incomplete_maglev_track": "Incomplete Maglev Track",
   "item.highspeed.cobalt_magnet": "Cobalt Magnet",
   "item.highspeed.cobalt_ingot": "Cobalt Ingot",
   "item.highspeed.raw_cobalt": "Raw Cobalt",

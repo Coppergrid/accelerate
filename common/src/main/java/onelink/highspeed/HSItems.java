@@ -1,5 +1,6 @@
 package onelink.highspeed;
 
+import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
@@ -19,6 +20,15 @@ public class HSItems {
             .lang("Raw Cobalt")
             .register();
 
+    public static final ItemEntry<SequencedAssemblyItem>
+
+            INCOMPLETE_HIGH_SPEED_TRACK = sequencedIngredient("incomplete_high_speed_track"),
+            INCOMPLETE_MAGLEV_TRACK = sequencedIngredient("incomplete_maglev_track");
+
+    private static ItemEntry<SequencedAssemblyItem> sequencedIngredient(String name) {
+        return REGISTRATE.item(name, SequencedAssemblyItem::new)
+                .register();
+    }
     public static void init() {
         // load the class and register everything
         HighSpeed.LOGGER.info("Registering items for " + HighSpeed.NAME);
