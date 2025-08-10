@@ -4,30 +4,30 @@ loaderVersion = "[${forge_version},)"
 license = "CC BY-NC-SA 4.0"
 
 [[mods]]
-modId = "createmaglev"
+modId = "highspeed"
 version = "${version}"
-displayName = "Create: Maglev"
+displayName = "Create: Highspeed"
 authors = "OneLink"
 description = '''
-Create: Maglev is an addon for create that adds a new type of rail, maglev, which allows for higher speeds than normal tracks.
+Create: Highspeed is an addon for create that adds many high-speed rail features, including a new type of rail, maglev, which allows for higher speeds than normal tracks.
 '''
 logoFile = "icon.png"
 
-[[dependencies.createmaglev]]
+[[dependencies.highspeed]]
 modId = "forge"
 mandatory = true
 versionRange = "[${forge_version},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.createmaglev]]
+[[dependencies.highspeed]]
 modId = "minecraft"
 mandatory = true
 versionRange = "${minecraft_version}"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.createmaglev]]
+[[dependencies.highspeed]]
 modId="create"
 mandatory=true
 versionRange="${create_version}"

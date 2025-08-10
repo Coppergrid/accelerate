@@ -6,8 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class HighSpeed {
-    public static final String MOD_ID = "createmaglev";
-    public static final String NAME = "Create: Maglev";
+    public static final String MOD_ID = "highspeed";
+    public static final String NAME = "Create: Highspeed";
     public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
 
