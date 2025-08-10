@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NCN",
+    "NNN"
+  ],
+  "key": {
+    "N": { "item": "minecraft:iron_nugget" },
+    "C": { "item": "highspeed:cobalt_ingot" }
+  },
+  "result": {
+    "item": "highspeed:charged_cobalt_ingot",
+    "count": 1
+  }
+}

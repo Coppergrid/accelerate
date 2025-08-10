@@ -1,0 +1,13 @@
+{
+  "type": "create:blasting",
+  "ingredients": [
+    {
+      "item": "highspeed:charged_cobalt_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "highspeed:magnetized_cobalt_ingot"
+    }
+  ]
+}
