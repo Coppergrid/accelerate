@@ -3,8 +3,9 @@
   "block.highspeed.maglev_track": "Maglev Track",
   "item.highspeed.incomplete_high_speed_track": "Incomplete High Speed Track",
   "item.highspeed.incomplete_maglev_track": "Incomplete Maglev Track",
-  "item.highspeed.cobalt_magnet": "Cobalt Magnet",
-  "item.highspeed.cobalt_ingot": "Cobalt Ingot",
   "item.highspeed.raw_cobalt": "Raw Cobalt",
+  "item.highspeed.cobalt_ingot": "Cobalt Ingot",
+  "item.highspeed.charged_cobalt_ingot": "Charged Cobalt Ingot",
+  "item.highspeed.magnetized_cobalt_ingot": "Magnetized Cobalt Ingot",
   "highspeed.creative_tab.main": "Create: Highspeed"
 }
