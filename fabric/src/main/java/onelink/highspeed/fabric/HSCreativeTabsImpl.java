@@ -24,7 +24,7 @@ public class HSCreativeTabsImpl {
                 getBaseTab(),
                 FabricItemGroup.builder()
                         .title(Component.translatable(HighSpeed.MOD_ID + "." + "creative_tab.main"))
-                        .icon(HSBlocks.MAGLEV_TRACK_BLOCK::asStack)
+                        .icon(HSBlocks.HIGH_SPEED_TRACK_BLOCK::asStack)
                         .build()
         );
     }
