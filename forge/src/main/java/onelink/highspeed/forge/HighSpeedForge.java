@@ -1,7 +1,5 @@
 package onelink.highspeed.forge;
 
-import onelink.highspeed.HSBlocks;
-import onelink.highspeed.HSItems;
 import onelink.highspeed.HighSpeed;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -13,8 +11,7 @@ public class HighSpeedForge {
         // registrate must be given the mod event bus on forge before registration
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         HSCreativeTabsImpl.register(eventBus);
-        HSBlocks.REGISTRATE.registerEventListeners(eventBus);
-        HSItems.REGISTRATE.registerEventListeners(eventBus);
+        HighSpeed.REGISTRATE.registerEventListeners(eventBus);
         HighSpeed.init();
     }
 }

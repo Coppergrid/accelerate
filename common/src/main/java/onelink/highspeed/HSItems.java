@@ -1,26 +1,24 @@
 package onelink.highspeed;
 
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
-import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 
 public class HSItems {
-    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(HighSpeed.MOD_ID).defaultCreativeTab(HSCreativeTabs.getBaseTab());
 
-    public static final ItemEntry<Item> RAW_COBALT = REGISTRATE.item("raw_cobalt", Item::new)
+    public static final ItemEntry<Item> RAW_COBALT = HighSpeed.REGISTRATE.item("raw_cobalt", Item::new)
             .lang("Raw Cobalt")
             .register();
 
-    public static final ItemEntry<Item> COBALT_INGOT = REGISTRATE.item("cobalt_ingot", Item::new)
+    public static final ItemEntry<Item> COBALT_INGOT = HighSpeed.REGISTRATE.item("cobalt_ingot", Item::new)
             .lang("Cobalt Ingot")
             .register();
 
-    public static final ItemEntry<Item> CHARGED_COBALT_INGOT = REGISTRATE.item("charged_cobalt_ingot", Item::new)
+    public static final ItemEntry<Item> CHARGED_COBALT_INGOT = HighSpeed.REGISTRATE.item("charged_cobalt_ingot", Item::new)
             .lang("Charged Cobalt Ingot")
             .register();
 
-    public static final ItemEntry<Item> MAGNETIZED_COBALT_INGOT = REGISTRATE.item("magnetized_cobalt_ingot", Item::new)
+    public static final ItemEntry<Item> MAGNETIZED_COBALT_INGOT = HighSpeed.REGISTRATE.item("magnetized_cobalt_ingot", Item::new)
             .lang("Magnetized Cobalt Ingot")
             .register();
 
@@ -30,7 +28,7 @@ public class HSItems {
             INCOMPLETE_MAGLEV_TRACK = sequencedIngredient("incomplete_maglev_track");
 
     private static ItemEntry<SequencedAssemblyItem> sequencedIngredient(String name) {
-        return REGISTRATE.item(name, SequencedAssemblyItem::new)
+        return HighSpeed.REGISTRATE.item(name, SequencedAssemblyItem::new)
                 .register();
     }
     public static void init() {
