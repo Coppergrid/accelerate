@@ -8,11 +8,11 @@
   "results": [
     {
       "item": "create:copper_nugget",
-      "count": 2
+      "count": 5
     },
     {
       "item": "create:copper_nugget",
-      "count": 1,
+      "count": 2,
       "chance": 0.5
     },
     {
