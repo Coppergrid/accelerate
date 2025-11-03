@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "highspeed:raw_cobalt"
+    "item": "accelerate:raw_cobalt"
   },
-  "result": "highspeed:cobalt_ingot",
+  "result": "accelerate:cobalt_ingot",
   "experience": 0.7,
   "cookingtime": 200
 }

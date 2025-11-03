@@ -3,7 +3,7 @@
   "heatRequirement": "heated",
   "ingredients": [
     {
-      "item": "highspeed:cobalt_ingot"
+      "item": "accelerate:cobalt_ingot"
     },
     {
       "item": "minecraft:iron_ingot"
@@ -11,7 +11,7 @@
   ],
   "results": [
     {
-      "item": "highspeed:charged_cobalt_ingot",
+      "item": "accelerate:charged_cobalt_ingot",
       "count": 1
     }
   ]

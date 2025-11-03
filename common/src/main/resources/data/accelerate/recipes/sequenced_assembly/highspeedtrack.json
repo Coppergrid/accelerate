@@ -6,7 +6,7 @@
   "loops": 3,
   "results": [
     {
-      "item": "highspeed:high_speed_track"
+      "item": "accelerate:high_speed_track"
     }
   ],
   "sequence": [
@@ -14,7 +14,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "highspeed:incomplete_high_speed_track"
+          "item": "accelerate:incomplete_high_speed_track"
         },
         [
           {
@@ -24,7 +24,7 @@
       ],
       "results": [
         {
-          "item": "highspeed:incomplete_high_speed_track"
+          "item": "accelerate:incomplete_high_speed_track"
         }
       ]
     },
@@ -32,7 +32,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "highspeed:incomplete_high_speed_track"
+          "item": "accelerate:incomplete_high_speed_track"
         },
         [
           {
@@ -42,7 +42,7 @@
       ],
       "results": [
         {
-          "item": "highspeed:incomplete_high_speed_track"
+          "item": "accelerate:incomplete_high_speed_track"
         }
       ]
     },
@@ -50,17 +50,17 @@
       "type": "create:pressing",
       "ingredients": [
         {
-          "item": "highspeed:incomplete_high_speed_track"
+          "item": "accelerate:incomplete_high_speed_track"
         }
       ],
       "results": [
         {
-          "item": "highspeed:incomplete_high_speed_track"
+          "item": "accelerate:incomplete_high_speed_track"
         }
       ]
     }
   ],
   "transitionalItem": {
-    "item": "highspeed:incomplete_high_speed_track"
+    "item": "accelerate:incomplete_high_speed_track"
   }
 }

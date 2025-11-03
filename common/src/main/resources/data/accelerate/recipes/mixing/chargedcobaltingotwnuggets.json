@@ -3,7 +3,7 @@
   "heatRequirement": "heated",
   "ingredients": [
     {
-      "item": "highspeed:cobalt_ingot"
+      "item": "accelerate:cobalt_ingot"
     },
     {
       "item": "minecraft:iron_nugget"
@@ -35,7 +35,7 @@
   ],
   "results": [
     {
-      "item": "highspeed:charged_cobalt_ingot",
+      "item": "accelerate:charged_cobalt_ingot",
       "count": 1
     }
   ]
