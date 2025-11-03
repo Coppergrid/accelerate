@@ -13,6 +13,7 @@ public class HighSpeedFabric implements ModInitializer {
                 () -> () -> "{} is accessing Porting Lib on a Fabric server!"
                 ), HighSpeed.NAME);
         // on fabric, Registrates must be explicitly finalized and registered.
+        HSCreativeTabsImpl.register();
         HighSpeed.REGISTRATE.register();
     }
 }
