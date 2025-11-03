@@ -4,30 +4,30 @@ loaderVersion = "[${forge_version},)"
 license = "CC BY-NC-SA 4.0"
 
 [[mods]]
-modId = "highspeed"
+modId = "accelerate"
 version = "${version}"
-displayName = "Create: Highspeed"
+displayName = "Create: Accelerate"
 authors = "OneLink, BlahajTheShark14"
 description = '''
-Create: Highspeed is an addon for create that adds many high-speed rail features, including a new type of rail, maglev, which allows for higher speeds than normal tracks.
+Create: Accelerate is an addon for create that adds many high-speed rail features, including a new type of rail, maglev, which allows for higher speeds than normal tracks.
 '''
-logoFile = "../acceleratelogo.png"
+logoFile = "./acceleratelogo.png"
 
-[[dependencies.highspeed]]
+[[dependencies.accelerate]]
 modId = "forge"
 mandatory = true
 versionRange = "[${forge_version},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.highspeed]]
+[[dependencies.accelerate]]
 modId = "minecraft"
 mandatory = true
 versionRange = "${minecraft_version}"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.highspeed]]
+[[dependencies.accelerate]]
 modId="create"
 mandatory=true
 versionRange="[6.0.6,6.1.0)"
