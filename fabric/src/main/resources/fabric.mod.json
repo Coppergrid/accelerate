@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "highspeed",
+  "id": "accelerate",
   "version": "${version}",
-  "name": "Create: Highspeed",
-  "description": "Create: Highspeed is an addon for create that adds many high-speed rail features, including a new type of rail, maglev, which allows for higher speeds than normal tracks.",
+  "name": "Create: Accelerate",
+  "description": "Create: Accelerate is an addon for create that adds many high-speed rail features, including a new type of rail, maglev, which allows for higher speeds than normal tracks.",
   "authors": [
     "OneLink",
     "BlahajTheShark14"
@@ -13,16 +13,16 @@
     "sources": "https://github.com/OneLinkPog/highspeed"
   },
   "license": "CC BY-NC-SA 4.0",
-  "icon": "assets/highspeed/highspeedlogo.png",
+  "icon": "assets/accelerate/acceleratelogo.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "onelink.highspeed.fabric.HighSpeedFabric"
+      "onelink.accelerate.fabric.AccelerateFabric"
     ]
   },
   "mixins": [
-    "highspeed.mixins.json",
-    "highspeed-common.mixins.json"
+    "accelerate.mixins.json",
+    "accelerate-common.mixins.json"
   ],
   "depends": {
     "minecraft": "${minecraft_version}",

@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "highspeed:item/magnetized_cobalt_ingot"
-  }
-}

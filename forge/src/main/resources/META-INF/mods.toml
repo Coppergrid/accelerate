@@ -11,7 +11,7 @@ authors = "OneLink, BlahajTheShark14"
 description = '''
 Create: Highspeed is an addon for create that adds many high-speed rail features, including a new type of rail, maglev, which allows for higher speeds than normal tracks.
 '''
-logoFile = "highspeedlogo.png"
+logoFile = "../acceleratelogo.png"
 
 [[dependencies.highspeed]]
 modId = "forge"

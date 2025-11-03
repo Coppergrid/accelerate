@@ -67,8 +67,8 @@ processResources {
 loom {
     forge {
         mixinConfig(
-                "highspeed-common.mixins.json",
-                "highspeed.mixins.json"
+                "accelerate-common.mixins.json",
+                "accelerate.mixins.json"
         )
     }
 }

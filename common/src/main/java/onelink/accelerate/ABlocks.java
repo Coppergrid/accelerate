@@ -1,0 +1,33 @@
+package onelink.accelerate;
+
+import com.simibubi.create.content.trains.track.TrackBlock;
+import com.simibubi.create.content.trains.track.TrackBlockItem;
+import com.simibubi.create.AllTags.AllBlockTags;
+import com.tterrag.registrate.util.entry.BlockEntry;
+import net.minecraft.world.level.block.Block;
+
+public class ABlocks {
+
+    public static final BlockEntry<TrackBlock> HIGH_SPEED_TRACK_BLOCK = Accelerate.REGISTRATE.block("high_speed_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), ATrackMaterials.HIGHSPEED))
+            .tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
+            .tag(AllBlockTags.TRACKS.tag)
+            .tag(AllBlockTags.GIRDABLE_TRACKS.tag)
+            .item(TrackBlockItem::new)
+            .lang("High Speed Track")
+            .build()
+            .register();
+
+    public static final BlockEntry<TrackBlock> MAGLEV_TRACK_BLOCK = Accelerate.REGISTRATE.block("maglev_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), ATrackMaterials.MAGLEV))
+			.tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
+			.tag(AllBlockTags.TRACKS.tag)
+			.tag(AllBlockTags.GIRDABLE_TRACKS.tag)
+			.item(TrackBlockItem::new)
+            .lang("Maglev Track")
+			.build()
+			.register();
+
+	public static void init() {
+		// load the class and register everything
+		Accelerate.LOGGER.info("Registering blocks for " + Accelerate.NAME);
+	}
+}
