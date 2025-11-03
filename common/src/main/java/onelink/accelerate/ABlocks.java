@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.Block;
 
 public class ABlocks {
 
-    public static final BlockEntry<TrackBlock> HIGH_SPEED_TRACK_BLOCK = Accelerate.REGISTRATE.block("high_speed_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), ATrackMaterials.HIGHSPEED))
+    public static final BlockEntry<TrackBlock> HIGH_SPEED_TRACK_BLOCK = Accelerate.REGISTRATE.block("high_speed_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), ATrackMaterials.HIGH_SPEED))
             .tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
             .tag(AllBlockTags.TRACKS.tag)
             .tag(AllBlockTags.GIRDABLE_TRACKS.tag)
