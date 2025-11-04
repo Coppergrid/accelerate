@@ -10,8 +10,8 @@ import static com.simibubi.create.content.trains.track.TrackMaterialFactory.make
 public class ATrackMaterials {
 
     public static final TrackMaterial
-            HIGH_SPEED = make(new ResourceLocation("accelerate", "highspeed"))
-            .lang("Highspeed")
+            HIGH_SPEED = make(new ResourceLocation("accelerate", "high_speed"))
+            .lang("High Speed")
             .block(() -> ABlocks.HIGH_SPEED_TRACK_BLOCK)
             .particle(new ResourceLocation("block/iron_block"))
             .sleeper(Blocks.STONE_SLAB)
