@@ -9,8 +9,9 @@
     "BlahajTheShark14"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/OneLinkPog/highspeed"
+    "homepage": "https://modrinth.com/project/create-accelerate",
+    "issues": "https://github.com/OneLinkPog/accelerate/issues",
+    "sources": "https://github.com/OneLinkPog/accelerate"
   },
   "license": "CC BY-NC-SA 4.0",
   "icon": "assets/accelerate/acceleratelogo.png",
