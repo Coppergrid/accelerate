@@ -4,6 +4,7 @@ import com.simibubi.create.content.trains.track.TrackBlock;
 import com.simibubi.create.content.trains.track.TrackBlockItem;
 import com.simibubi.create.AllTags.AllBlockTags;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 
 public class ABlocks {
@@ -25,6 +26,18 @@ public class ABlocks {
             .lang("Maglev Track")
 			.build()
 			.register();
+
+    public static final BlockEntry<Block> RAW_COBALT_BLOCK = Accelerate.REGISTRATE.block("raw_cobalt_block", Block::new)
+            .item(BlockItem::new)
+            .lang("Block of Raw Cobalt")
+            .build()
+            .register();
+
+    public static final BlockEntry<Block> COBALT_BLOCK = Accelerate.REGISTRATE.block("cobalt_block", Block::new)
+            .item(BlockItem::new)
+            .lang("Block of Cobalt")
+            .build()
+            .register();
 
 	public static void init() {
 		// load the class and register everything
