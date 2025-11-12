@@ -19,7 +19,4 @@ public class Accelerate {
         AItems.init(); // hold registrate in a separate class to avoid loading early on forge
     }
 
-    public static ResourceLocation id(String path) {
-        return new ResourceLocation(MOD_ID, path);
-    }
 }
