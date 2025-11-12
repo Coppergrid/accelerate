@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "accelerate:cobalt_ingot"
+    },
+    "title": {
+      "translate": "advancement.accelerate.cobalt_ingot.title"
+    },
+    "description": {
+      "translate": "advancement.accelerate.cobalt_ingot.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "accelerate:high_speed_track",
+  "criteria": {
+    "got_high_speed_track": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "accelerate:cobalt_ingot"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "accelerate:high_speed_track",
+  "parent": "accelerate:magnetized_cobalt_ingot",
   "criteria": {
     "got_maglev_track": {
       "trigger": "minecraft:inventory_changed",
