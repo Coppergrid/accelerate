@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "accelerate:maglev_track"
+    },
+    "title": {
+      "translate": "advancement.accelerate.maglev_track.title"
+    },
+    "description": {
+      "translate": "advancement.accelerate.maglev_track.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "accelerate:high_speed_track",
+  "criteria": {
+    "got_maglev_track": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+              "tag": "accelerate:maglev_tracks"
+          }
+        ]
+      }
+    }
+  }
+}

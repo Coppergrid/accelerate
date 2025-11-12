@@ -3,12 +3,20 @@
   "block.accelerate.maglev_track": "Maglev Track",
   "block.accelerate.raw_cobalt_block": "Block of Raw Cobalt",
   "block.accelerate.cobalt_block": "Block of Cobalt",
+
   "item.accelerate.incomplete_high_speed_track": "Incomplete High Speed Track",
   "item.accelerate.incomplete_maglev_track": "Incomplete Maglev Track",
   "item.accelerate.raw_cobalt": "Raw Cobalt",
   "item.accelerate.cobalt_ingot": "Cobalt Ingot",
   "item.accelerate.charged_cobalt_ingot": "Charged Cobalt Ingot",
   "item.accelerate.magnetized_cobalt_ingot": "Magnetized Cobalt Ingot",
+
   "tag.accelerate.high_speed_concrete": "High Speed Concrete",
+
+  "advancement.accelerate.high_speed_track.title": "Accelerating Onward",
+  "advancement.accelerate.high_speed_track.description": "Obtain a high speed track.",
+  "advancement.accelerate.maglev_track.title": "Beyond the Rails",
+  "advancement.accelerate.maglev_track.description": "Obtain a maglev track.",
+
   "accelerate.creative_tab.main": "Create: Accelerate"
 }
