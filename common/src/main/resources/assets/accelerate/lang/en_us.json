@@ -9,5 +9,6 @@
   "item.accelerate.cobalt_ingot": "Cobalt Ingot",
   "item.accelerate.charged_cobalt_ingot": "Charged Cobalt Ingot",
   "item.accelerate.magnetized_cobalt_ingot": "Magnetized Cobalt Ingot",
+  "tag.accelerate.high_speed_concrete": "High Speed Concrete",
   "accelerate.creative_tab.main": "Create: Accelerate"
 }
