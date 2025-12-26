@@ -20,7 +20,9 @@
       "conditions": {
         "items": [
           {
-            "tag": "accelerate:high_speed_tracks"
+            "items": [
+              "accelerate:high_speed_track"
+            ]
           }
         ]
       }

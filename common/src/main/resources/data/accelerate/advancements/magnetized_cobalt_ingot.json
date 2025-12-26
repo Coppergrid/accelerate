@@ -15,12 +15,14 @@
   },
   "parent": "accelerate:cobalt_ingot",
   "criteria": {
-    "got_high_speed_track": {
+    "got_magnetized_cobalt": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "accelerate:magnetized_cobalt_ingot"
+            "items": [
+              "accelerate:magnetized_cobalt_ingot"
+            ]
           }
         ]
       }

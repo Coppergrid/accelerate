@@ -20,7 +20,9 @@
       "conditions": {
         "items": [
           {
-              "tag": "accelerate:maglev_tracks"
+            "items": [
+              "accelerate:maglev_track"
+            ]
           }
         ]
       }

@@ -15,12 +15,14 @@
   },
   "parent": "accelerate:high_speed_track",
   "criteria": {
-    "got_high_speed_track": {
+    "got_cobalt_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "accelerate:cobalt_ingot"
+            "items": [
+              "accelerate:cobalt_ingot"
+            ]
           }
         ]
       }
