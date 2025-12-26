@@ -13,14 +13,14 @@
 
   "tag.accelerate.high_speed_concrete": "High Speed Concrete",
 
-  "advancement.accelerate.cobalt_ingot.title": "Forging Ahead",
-  "advancement.accelerate.cobalt_ingot.description": "Obtain cobalt from copper.",
-  "advancement.accelerate.magnetized_cobalt_ingot.title": "MAGNETS!",
-  "advancement.accelerate.magnetized_cobalt_ingot.description": "Magnetize cobalt.",
   "advancement.accelerate.high_speed_track.title": "Accelerating Onward",
-  "advancement.accelerate.high_speed_track.description": "Obtain a high speed track.",
+  "advancement.accelerate.high_speed_track.description": "Obtain a high speed track",
+  "advancement.accelerate.cobalt_ingot.title": "Forging Ahead",
+  "advancement.accelerate.cobalt_ingot.description": "Obtain cobalt from copper",
+  "advancement.accelerate.magnetized_cobalt_ingot.title": "MAGNETS!",
+  "advancement.accelerate.magnetized_cobalt_ingot.description": "Magnetize cobalt with a blaze burner",
   "advancement.accelerate.maglev_track.title": "Beyond the Rails",
-  "advancement.accelerate.maglev_track.description": "Obtain a maglev track.",
+  "advancement.accelerate.maglev_track.description": "Obtain a maglev track",
 
   "accelerate.creative_tab.main": "Create: Accelerate"
 }
