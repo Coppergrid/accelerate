@@ -2,7 +2,6 @@ package onelink.accelerate;
 
 import com.simibubi.create.content.trains.track.TrackMaterial;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 
 import static com.simibubi.create.content.trains.track.TrackMaterialFactory.make;
