@@ -15,16 +15,14 @@ public class ATrackMaterials {
             .block(() -> ABlocks.HIGH_SPEED_TRACK_BLOCK)
             .particle(new ResourceLocation("block/iron_block"))
             .sleeper(Blocks.STONE_SLAB)
-            .rails(Items.IRON_NUGGET)
             .standardModels()
             .build(),
 
         MAGLEV = make(new ResourceLocation("accelerate", "maglev"))
             .lang("Maglev")
             .block(() -> ABlocks.MAGLEV_TRACK_BLOCK)
-            .particle(new ResourceLocation("block/diamond_block"))
+            .particle(new ResourceLocation("block/cobalt"))
             .sleeper(Blocks.QUARTZ_SLAB)
-            .rails(Items.QUARTZ)
             .standardModels()
             .build();
 
