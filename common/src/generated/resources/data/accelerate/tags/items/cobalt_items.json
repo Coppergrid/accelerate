@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "accelerate:cobalt_ingot",
+    "accelerate:charged_cobalt_ingot",
+    "accelerate:magnetized_cobalt_ingot"
+  ]
+}
