@@ -40,3 +40,8 @@ dependencies {
     modImplementation("com.simibubi.create:create-fabric:$create_fabric_version")
 
 }
+sourceSets {
+    main {
+        resources.srcDir file("src/generated/resources")
+    }
+}

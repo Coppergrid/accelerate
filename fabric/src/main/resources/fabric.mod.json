@@ -19,6 +19,9 @@
   "entrypoints": {
     "main": [
       "onelink.accelerate.fabric.AccelerateFabric"
+    ],
+    "fabric-datagen": [
+      "onelink.accelerate.fabric.DataGenEntry"
     ]
   },
   "mixins": [
