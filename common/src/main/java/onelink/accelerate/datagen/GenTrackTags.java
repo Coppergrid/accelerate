@@ -13,7 +13,7 @@ import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.providers.RegistrateTagsProvider;
 
 public class GenTrackTags {
-    public static final TagKey<Item> COBALT_INGOTS = createItemTag("cobalt_items");
+    public static final TagKey<Item> COBALT_INGOTS = createItemTag("cobalt_ingots");
     public static final TagKey<Block> ACCELERATE_TRACKS = createBlockTag("track_items");
     public static final TagKey<Block> CREATE_TRACKS = createBlockTag("create", "tracks");
 
