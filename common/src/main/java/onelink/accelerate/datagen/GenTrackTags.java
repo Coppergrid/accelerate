@@ -40,7 +40,7 @@ public class GenTrackTags {
     }
 
     private static void genBlockTags(RegistrateTagsProvider<Block> provider) {
-        TagGen.CreateTagsProvider<Block> blockProvider = new TagGen.CreateTagsProvider<>(provider, Block::builtInRegistryHolder);
+        TagGen.CreateTagsProvider<Block> blockProvider = new TagGen.CreateTagsProvider<>(provider, block -> (net.minecraft.core.Holder.Reference<Block>) BuiltInRegistries.BLOCK.wrapAsHolder(block));
 
         // Merge your block tag with another mod's tag list
         blockProvider.tag(CREATE_TRACKS)
