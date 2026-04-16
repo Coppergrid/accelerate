@@ -57,7 +57,7 @@ public class GenTrackTags {
     }
 
     private static void genItemTags(RegistrateTagsProvider<Item> provider) {
-        TagGen.CreateTagsProvider<Item> itemProvider = new TagGen.CreateTagsProvider<>(provider, Item::builtInRegistryHolder);
+        TagGen.CreateTagsProvider<Item> itemProvider = new TagGen.CreateTagsProvider<>(provider, item -> (net.minecraft.core.Holder.Reference<Item>) BuiltInRegistries.ITEM.wrapAsHolder(item));
 
         // Add two items from your mod
         itemProvider.tag(COBALT_INGOTS)
