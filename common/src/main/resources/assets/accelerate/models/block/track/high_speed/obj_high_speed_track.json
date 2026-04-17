@@ -1,0 +1,9 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "0": "accelerate:block/standard_track",
+    "1": "accelerate:block/standard_track_mip",
+    "2": "accelerate:block/standard_track_crossing",
+    "particle": "accelerate:block/raw_cobalt_block"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "accelerate:block/track/high_speed/obj_high_speed_track",
+  "loader": "porting_lib:obj",
+  "flip_v": true,
+  "render_type": "minecraft:cutout_mipped",
+  "model": "accelerate:models/block/track/high_speed/tie.obj"
+}
