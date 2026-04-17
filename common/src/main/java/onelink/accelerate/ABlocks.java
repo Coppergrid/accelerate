@@ -6,6 +6,7 @@ import com.simibubi.create.AllTags.AllBlockTags;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
+import onelink.accelerate.datagen.CustomTrackBlockStateGenerator;
 
 public class ABlocks {
 
@@ -13,6 +14,7 @@ public class ABlocks {
             .tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
             .tag(AllBlockTags.TRACKS.tag)
             .tag(AllBlockTags.GIRDABLE_TRACKS.tag)
+            .blockstate(new CustomTrackBlockStateGenerator("high_speed")::generate)
             .item(TrackBlockItem::new)
             .lang("High Speed Track")
             .build()
@@ -22,7 +24,8 @@ public class ABlocks {
 			.tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
 			.tag(AllBlockTags.TRACKS.tag)
 			.tag(AllBlockTags.GIRDABLE_TRACKS.tag)
-			.item(TrackBlockItem::new)
+            .blockstate(new CustomTrackBlockStateGenerator("maglev")::generate)
+            .item(TrackBlockItem::new)
             .lang("Maglev Track")
 			.build()
 			.register();
