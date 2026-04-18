@@ -1,0 +1,38 @@
+{
+  "parent": "accelerate:cobalt_ingot",
+  "criteria": {
+    "has_magnetized_cobalt_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "accelerate:magnetized_cobalt_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.accelerate.magnetized_cobalt_ingot.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "accelerate:magnetized_cobalt_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.accelerate.magnetized_cobalt_ingot.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_magnetized_cobalt_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

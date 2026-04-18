@@ -1,0 +1,38 @@
+{
+  "parent": "accelerate:magnetized_cobalt_ingot",
+  "criteria": {
+    "has_maglev_track": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "accelerate:maglev_track"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.accelerate.maglev_track.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "accelerate:maglev_track"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.accelerate.maglev_track.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_maglev_track"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

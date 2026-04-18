@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_high_speed_track": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "accelerate:high_speed_track"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "accelerate:textures/block/cobalt_block.png",
+    "description": {
+      "translate": "advancement.accelerate.high_speed_track.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "accelerate:high_speed_track"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.accelerate.high_speed_track.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_high_speed_track"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
