@@ -1,5 +1,5 @@
 {
-  "parent": "create:block/track/segment_left",
+  "parent": "create:block/track/cross_diag",
   "textures": {
     "0": "accelerate:block/high_speed_track",
     "1": "accelerate:block/high_speed_track_mip",

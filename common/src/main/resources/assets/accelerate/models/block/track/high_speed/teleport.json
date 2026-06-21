@@ -1,0 +1,9 @@
+{
+  "parent": "create:block/track/teleport",
+  "textures": {
+    "1": "accelerate:block/high_speed_portal_track",
+    "2": "accelerate:block/high_speed_portal_track_mip",
+    "3": "accelerate:block/high_speed_track",
+    "particle": "accelerate:block/raw_cobalt_block"
+  }
+}

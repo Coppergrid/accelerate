@@ -1,6 +1,9 @@
 {
-  "parent": "accelerate:block/track/high_speed/obj_high_speed_track",
-  "loader": "porting_lib:obj",
-  "flip_v": true,
-  "model": "accelerate:models/block/track/high_speed/segment_right.obj"
+  "parent": "create:block/track/segment_right",
+  "textures": {
+    "0": "accelerate:block/high_speed_track",
+    "1": "accelerate:block/high_speed_track_mip",
+    "2": "accelerate:block/high_speed_track_crossing",
+    "particle": "accelerate:block/raw_cobalt_block"
+  }
 }
