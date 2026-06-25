@@ -9,6 +9,6 @@ public class AConfigForge {
     public static void register() {
         Accelerate.LOGGER.info("Registering configs with Forge Config API");
         ModLoadingContext.get().registerConfig(
-                ModConfig.Type.COMMON, AConfig.COMMON_SPEC, Accelerate.MOD_ID + "-common.toml");
+                ModConfig.Type.SERVER, AConfig.SERVER_SPEC, Accelerate.MOD_ID + "-server.toml");
     }
 }
