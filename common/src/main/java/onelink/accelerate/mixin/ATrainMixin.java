@@ -2,6 +2,7 @@ package onelink.accelerate.mixin;
 
 import com.simibubi.create.content.trains.entity.Train;
 import com.simibubi.create.infrastructure.config.AllConfigs;
+import onelink.accelerate.Accelerate;
 import onelink.accelerate.config.AConfig;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -26,6 +27,7 @@ public abstract class ATrainMixin {
 
     @Overwrite()
     public float acceleration() {
+        Accelerate.LOGGER.info("DEV TESTING VERSION - ALL TRACKS FUNCTION AS HIGH SPEED");
         float baseAccel = (fuelTicks > 0
                 ? AllConfigs.server().trains.poweredTrainAcceleration.getF()
                 : AllConfigs.server().trains.trainAcceleration.getF());
