@@ -3,6 +3,7 @@ package onelink.accelerate.fabric;
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import onelink.accelerate.Accelerate;
 import net.fabricmc.api.ModInitializer;
+import onelink.accelerate.fabric.config.AConfigFabric;
 
 public class AccelerateFabric implements ModInitializer {
     @Override
@@ -15,5 +16,6 @@ public class AccelerateFabric implements ModInitializer {
         // on fabric, Registrates must be explicitly finalized and registered.
         ACreativeTabsImpl.register();
         Accelerate.REGISTRATE.register();
+        AConfigFabric.register();
     }
 }

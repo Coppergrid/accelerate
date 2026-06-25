@@ -4,6 +4,7 @@ import onelink.accelerate.Accelerate;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import onelink.accelerate.forge.config.AConfigForge;
 
 @Mod(Accelerate.MOD_ID)
 public class AccelerateForge {
@@ -13,5 +14,6 @@ public class AccelerateForge {
         ACreativeTabsImpl.register(eventBus);
         Accelerate.REGISTRATE.registerEventListeners(eventBus);
         Accelerate.init();
+        AConfigForge.register();
     }
 }
