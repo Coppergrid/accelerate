@@ -13,15 +13,15 @@ public class AConfig {
         Server(ForgeConfigSpec.Builder builder) {
             builder.push("Train Stats");
             builder.push("Acceleration");
-            HighSpeedAccelMultiplier = builder.comment("Acceleration Multiplier for High Speed Tracks and Trains")
+            HighSpeedAccelMultiplier = builder.comment("Acceleration Multiplier for High Speed Trains")
                     .defineInRange("highSpeedAccelMultiplier", 1.5, 0.1, Double.MAX_VALUE);
-            MaglevAccelMultiplier = builder.comment("Acceleration Multiplier for Maglev Tracks and Trains")
+            MaglevAccelMultiplier = builder.comment("Acceleration Multiplier for Maglev Trains")
                     .defineInRange("maglevAccelMultiplier", 2.5, 0.1, Double.MAX_VALUE);
             builder.pop();
             builder.push("Speed");
-            HighSpeedSpeedMultiplier = builder.comment("Speed Multiplier for High Speed Tracks and Trains")
+            HighSpeedSpeedMultiplier = builder.comment("Speed Multiplier for High Speed Trains")
                     .defineInRange("highSpeedSpeedMultiplier", 2, 0.1, Double.MAX_VALUE);
-            MaglevSpeedMultiplier = builder.comment("Speed Multiplier for Maglev Tracks and Trains")
+            MaglevSpeedMultiplier = builder.comment("Speed Multiplier for Maglev Trains")
                     .defineInRange("maglevSpeedMultiplier", 3, 0.1, Double.MAX_VALUE);
             builder.pop();
             builder.pop();
