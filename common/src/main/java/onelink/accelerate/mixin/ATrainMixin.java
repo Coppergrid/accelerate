@@ -1,91 +1,57 @@
 package onelink.accelerate.mixin;
 
+import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.simibubi.create.content.trains.entity.Train;
-import com.simibubi.create.infrastructure.config.AllConfigs;
 import onelink.accelerate.config.AConfig;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(value = Train.class, remap = false)
 public abstract class ATrainMixin {
 
-    @Shadow
-    public int fuelTicks;
+    @Unique
+    boolean create_accelerate$onHighSpeedTrack = true; // TEMPORARY - DEV TESTING
 
     @Unique
-    boolean create_accelerate$onHighSpeedTrack = true;
+    boolean create_accelerate$onMaglevTrack = false; // See Above
 
-    @Unique
-    boolean create_accelerate$onMaglevTrack = false;
-
-    /**
-     * @author OneLink
-     * @reason Allow custom tracks to return higher speeds
-     */
-
-    @Overwrite
-    public float maxSpeed() {
-        float baseMaxSpeed = (fuelTicks > 0 ?
-                AllConfigs.server().trains.poweredTrainTopSpeed.getF() :
-                AllConfigs.server().trains.trainTopSpeed.getF());
-
+    @ModifyReturnValue(method = "acceleration", at = @At("RETURN"))
+    private float accelerate$modifyAcceleration(float original) {
         if (create_accelerate$onHighSpeedTrack) {
-            return (float) (baseMaxSpeed * AConfig.SERVER.HighSpeedSpeedMultiplier.get()) / 20;
+            return (float) (original * AConfig.SERVER.HighSpeedAccelMultiplier.get());
         }
         else if (create_accelerate$onMaglevTrack) {
-            return (float) (baseMaxSpeed * AConfig.SERVER.MaglevSpeedMultiplier.get()) / 20;
+            return (float) (original * AConfig.SERVER.MaglevAccelMultiplier.get());
         }
         else {
-            return baseMaxSpeed / 20;
+            return original;
         }
     }
 
-    /**
-     * @author OneLink
-     * @reason Allow custom tracks to return higher speeds
-     */
-
-    @Overwrite
-    public float maxTurnSpeed() {
-        float baseMaxTurnSpeed = (fuelTicks > 0 ?
-                AllConfigs.server().trains.poweredTrainTurningTopSpeed.getF() :
-                AllConfigs.server().trains.trainTurningTopSpeed.getF());
-
+    @ModifyReturnValue(method = "maxSpeed", at = @At("RETURN"))
+    private float accelerate$modifyMaxSpeed(float original) {
         if (create_accelerate$onHighSpeedTrack) {
-            return (float) (baseMaxTurnSpeed * AConfig.SERVER.HighSpeedSpeedMultiplier.get()) / 20;
+            return (float) (original * AConfig.SERVER.HighSpeedSpeedMultiplier.get());
         }
         else if (create_accelerate$onMaglevTrack) {
-            return (float) (baseMaxTurnSpeed * AConfig.SERVER.MaglevSpeedMultiplier.get()) / 20;
+            return (float) (original * AConfig.SERVER.MaglevSpeedMultiplier.get());
         }
         else {
-            return baseMaxTurnSpeed / 20;
+            return original;
         }
     }
 
-    /**
-     * @author OneLink
-     * @reason Allow custom tracks to return higher accelerations
-     */
-
-    @Overwrite
-    public float acceleration() {
-        float baseAccel = (fuelTicks > 0 ?
-                AllConfigs.server().trains.poweredTrainAcceleration.getF() :
-                AllConfigs.server().trains.trainAcceleration.getF());
-
-        if (create_accelerate$onHighSpeedTrack) { // Add methods to integrate properly
-            return (float) ((baseAccel * AConfig.SERVER.HighSpeedAccelMultiplier.get()) / 400);
+    @ModifyReturnValue(method = "maxTurnSpeed", at = @At("RETURN"))
+    private float accelerate$modifyMaxTurnSpeed(float original) {
+        if (create_accelerate$onHighSpeedTrack) {
+            return (float) (original * AConfig.SERVER.HighSpeedSpeedMultiplier.get());
         }
-
-        else if (create_accelerate$onMaglevTrack) { // See above
-            return (float) ((baseAccel * AConfig.SERVER.MaglevAccelMultiplier.get()) / 400);
+        else if (create_accelerate$onMaglevTrack) {
+            return (float) (original * AConfig.SERVER.MaglevSpeedMultiplier.get());
         }
-
         else {
-            return baseAccel / 400;
+            return original;
         }
-
     }
 }
