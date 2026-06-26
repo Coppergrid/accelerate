@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(value = Train.class, remap = false)
-public abstract class ATrainMixin {
+public abstract class TrainStatsMixin {
 
     @Unique
     boolean create_accelerate$onHighSpeedTrack = true; // TEMPORARY - DEV TESTING

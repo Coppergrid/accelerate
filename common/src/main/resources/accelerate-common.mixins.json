@@ -7,7 +7,7 @@
     "MixinTitleScreen"
   ],
   "mixins": [
-    "ATrainMixin"
+    "TrainStatsMixin"
   ],
   "injectors": {
     "defaultRequire": 1
