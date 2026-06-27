@@ -21,7 +21,7 @@ public class AConfig {
         Server(ForgeConfigSpec.Builder builder) {
             builder.push("Trains");
             builder.push("TrainStats");
-            DevMode = builder.comment("For testing purposes only. Applies high speed train parameters to ALL TRAINS. Use with caution.")
+            DevMode = builder.comment("For testing purposes only. Applies high speed train parameters to ALL TRAINS. Use with caution. (Requires world restart)")
                     .define("devMode", false);
             builder.push("Acceleration");
             HighSpeedAccelMultiplier = builder.comment("Acceleration Multiplier for High Speed Trains")
