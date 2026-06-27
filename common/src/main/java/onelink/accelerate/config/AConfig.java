@@ -10,12 +10,13 @@ public class AConfig {
         public final ForgeConfigSpec.DoubleValue HighSpeedSpeedMultiplier;
         public final ForgeConfigSpec.DoubleValue MaglevSpeedMultiplier;
 
+
         public final ForgeConfigSpec.BooleanValue HighSpeedRealisticRadius;
         public final ForgeConfigSpec.BooleanValue MaglevRealisticRadius;
 
         Server(ForgeConfigSpec.Builder builder) {
             builder.push("Trains");
-            builder.push("Train Stats");
+            builder.push("TrainStats");
             builder.push("Acceleration");
             HighSpeedAccelMultiplier = builder.comment("Acceleration Multiplier for High Speed Trains")
                     .defineInRange("highSpeedAccelMultiplier", 1.5, 0.1, Double.MAX_VALUE);
@@ -31,7 +32,7 @@ public class AConfig {
             builder.pop();
             builder.pop();
             builder.push("Tracks");
-            builder.push("Curve Radius");
+            builder.push("CurveRadius");
             HighSpeedRealisticRadius = builder.comment("Force Realistic Radii for High Speed Tracks")
                     .define("highSpeedRealisticRadius",true);
             MaglevRealisticRadius = builder.comment("Force Realistic Radii for Maglev Tracks")
