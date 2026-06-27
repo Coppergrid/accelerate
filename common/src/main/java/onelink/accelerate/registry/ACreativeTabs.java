@@ -1,4 +1,4 @@
-package onelink.accelerate;
+package onelink.accelerate.registry;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.minecraft.resources.ResourceKey;

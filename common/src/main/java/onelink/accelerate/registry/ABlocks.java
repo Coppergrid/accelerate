@@ -1,4 +1,4 @@
-package onelink.accelerate;
+package onelink.accelerate.registry;
 
 import com.simibubi.create.content.trains.track.TrackBlock;
 import com.simibubi.create.content.trains.track.TrackBlockItem;
@@ -6,6 +6,7 @@ import com.simibubi.create.AllTags.AllBlockTags;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
+import onelink.accelerate.Accelerate;
 import onelink.accelerate.datagen.CustomTrackBlockStateGenerator;
 
 public class ABlocks {

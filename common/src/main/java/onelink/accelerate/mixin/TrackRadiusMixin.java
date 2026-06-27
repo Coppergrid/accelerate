@@ -3,7 +3,7 @@ package onelink.accelerate.mixin;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.simibubi.create.content.trains.track.TrackMaterial;
 import com.simibubi.create.content.trains.track.TrackPlacement;
-import onelink.accelerate.ATrackMaterials;
+import onelink.accelerate.registry.ATrackMaterials;
 import onelink.accelerate.config.AConfig;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

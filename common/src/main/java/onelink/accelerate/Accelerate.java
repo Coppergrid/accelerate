@@ -1,6 +1,10 @@
 package onelink.accelerate;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import onelink.accelerate.registry.ABlocks;
+import onelink.accelerate.registry.ACreativeTabs;
+import onelink.accelerate.registry.AItems;
+import onelink.accelerate.utilities.AExpectPlatform;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

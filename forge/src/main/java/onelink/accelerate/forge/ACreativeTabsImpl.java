@@ -8,7 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import onelink.accelerate.Accelerate;
-import onelink.accelerate.ABlocks;
+import onelink.accelerate.registry.ABlocks;
 
 public class ACreativeTabsImpl {
     private static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =

@@ -1,4 +1,4 @@
-package onelink.accelerate;
+package onelink.accelerate.utilities;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 

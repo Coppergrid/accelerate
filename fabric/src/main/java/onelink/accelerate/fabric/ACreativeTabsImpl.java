@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import onelink.accelerate.Accelerate;
-import onelink.accelerate.ABlocks;
+import onelink.accelerate.registry.ABlocks;
 
 public class ACreativeTabsImpl {
     public static ResourceKey<CreativeModeTab> getBaseTab() {

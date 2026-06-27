@@ -1,8 +1,9 @@
-package onelink.accelerate;
+package onelink.accelerate.registry;
 
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
+import onelink.accelerate.Accelerate;
 
 public class AItems {
 

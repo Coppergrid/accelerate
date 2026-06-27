@@ -1,7 +1,8 @@
-package onelink.accelerate;
+package onelink.accelerate.content.track;
 
 import com.simibubi.create.content.trains.track.TrackBlock;
 import com.simibubi.create.content.trains.track.TrackMaterial;
+import onelink.accelerate.registry.ATrackMaterials;
 
 public class HighSpeedTrackBlock extends TrackBlock {
     public HighSpeedTrackBlock(Properties properties) {

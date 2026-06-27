@@ -1,4 +1,4 @@
-package onelink.accelerate;
+package onelink.accelerate.registry;
 
 import com.simibubi.create.content.trains.track.TrackMaterial;
 import net.minecraft.resources.ResourceLocation;
