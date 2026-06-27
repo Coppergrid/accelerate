@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public abstract class TrainStatsMixin {
 
     @Unique
-    boolean create_accelerate$onHighSpeedTrack = true; // TEMPORARY - DEV TESTING
+    boolean create_accelerate$onHighSpeedTrack = AConfig.SERVER.DevMode.get(); // TEMPORARY - DEV TESTING
 
     @Unique
     boolean create_accelerate$onMaglevTrack = false; // See Above
