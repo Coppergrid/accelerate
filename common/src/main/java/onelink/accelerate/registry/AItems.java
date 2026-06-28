@@ -23,6 +23,10 @@ public class AItems {
             .lang("Magnetized Cobalt Ingot")
             .register();
 
+    public static final ItemEntry<Item> AUTOMATED_DRIVER = Accelerate.REGISTRATE.item("automated_driver", Item::new)
+            .lang("Automated Driver")
+            .register();
+
     public static final ItemEntry<SequencedAssemblyItem>
 
             INCOMPLETE_HIGH_SPEED_TRACK = sequencedIngredient("incomplete_high_speed_track"),
