@@ -6,6 +6,7 @@ import com.simibubi.create.AllTags.AllBlockTags;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import onelink.accelerate.Accelerate;
 import onelink.accelerate.datagen.CustomTrackBlockStateGenerator;
 
@@ -38,12 +39,14 @@ public class ABlocks {
             .register();
 
     public static final BlockEntry<Block> COBALT_BLOCK = Accelerate.REGISTRATE.block("cobalt_block", Block::new)
+            .properties(properties -> properties.sound(SoundType.METAL))
             .item(BlockItem::new)
             .lang("Block of Cobalt")
             .build()
             .register();
 
     public static final BlockEntry<Block> AUTOMATED_DRIVING_MODULE = Accelerate.REGISTRATE.block("automated_driving_module", Block::new)
+            .properties(properties -> properties.sound(SoundType.NETHERITE_BLOCK))
             .item(BlockItem::new)
             .lang("Automated Driving Module")
             .build()
