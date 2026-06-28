@@ -43,6 +43,12 @@ public class ABlocks {
             .build()
             .register();
 
+    public static final BlockEntry<Block> AUTOMATED_DRIVING_MODULE = Accelerate.REGISTRATE.block("automated_driving_module", Block::new)
+            .item(BlockItem::new)
+            .lang("Automated Driving Module")
+            .build()
+            .register();
+
 	public static void init() {
 		// load the class and register everything
 		Accelerate.LOGGER.info("Registering blocks for " + Accelerate.NAME);
