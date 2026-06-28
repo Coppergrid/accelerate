@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "accelerate:automated_driving_module"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "accelerate:blocks/automated_driving_module"
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "accelerate:block/automated_driving_module"
+    }
+  }
+}
