@@ -8,7 +8,10 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import onelink.accelerate.Accelerate;
+import onelink.accelerate.content.components.AutomatedDrivingModule;
 import onelink.accelerate.datagen.CustomTrackBlockStateGenerator;
+
+import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour.interactionBehaviour;
 
 public class ABlocks {
 
@@ -47,6 +50,7 @@ public class ABlocks {
 
     public static final BlockEntry<Block> AUTOMATED_DRIVING_MODULE = Accelerate.REGISTRATE.block("automated_driving_module", Block::new)
             .properties(properties -> properties.sound(SoundType.NETHERITE_BLOCK))
+            .onRegister(interactionBehaviour(new AutomatedDrivingModule()))
             .item(BlockItem::new)
             .lang("Automated Driving Module")
             .build()
