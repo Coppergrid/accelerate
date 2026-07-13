@@ -3,13 +3,14 @@ package onelink.accelerate.registry;
 import com.simibubi.create.content.trains.track.TrackMaterial;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
+import onelink.accelerate.Accelerate;
 
 import static com.simibubi.create.content.trains.track.TrackMaterialFactory.make;
 
 public class ATrackMaterials {
 
     public static final TrackMaterial
-            HIGH_SPEED = make(new ResourceLocation("accelerate", "high_speed"))
+            HIGH_SPEED = make(Accelerate.asResource("high_speed"))
             .lang("High Speed")
             .block(() -> ABlocks.HIGH_SPEED_TRACK_BLOCK)
             .particle(new ResourceLocation("minecraft","block/iron_block"))
@@ -17,10 +18,10 @@ public class ATrackMaterials {
             .standardModels()
             .build(),
 
-        MAGLEV = make(new ResourceLocation("accelerate", "maglev"))
+        MAGLEV = make(Accelerate.asResource("maglev"))
             .lang("Maglev")
             .block(() -> ABlocks.MAGLEV_TRACK_BLOCK)
-            .particle(new ResourceLocation("accelerate", "block/cobalt"))
+            .particle(Accelerate.asResource("block/cobalt"))
             .sleeper(Blocks.QUARTZ_SLAB)
             .standardModels()
             .build();

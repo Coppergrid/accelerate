@@ -3,7 +3,7 @@ package onelink.accelerate.datagen.advancement;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import onelink.accelerate.Accelerate;
 import onelink.accelerate.registry.ABlocks;
 import onelink.accelerate.registry.AItems;
 import net.minecraft.advancements.FrameType;
@@ -20,14 +20,14 @@ public class AdvancementGen {
                         ABlocks.HIGH_SPEED_TRACK_BLOCK.asItem(),
                         Component.translatable("advancement.accelerate.high_speed_track.title"),
                         Component.translatable("advancement.accelerate.high_speed_track.description"),
-                        new ResourceLocation("accelerate", "textures/block/cobalt_block.png"),
+                        Accelerate.asResource("textures/block/cobalt_block.png"),
                         FrameType.GOAL,
                         true, true, false
                 )
                 .addCriterion("has_high_speed_track",
                         InventoryChangeTrigger.TriggerInstance.hasItems(ABlocks.HIGH_SPEED_TRACK_BLOCK.asItem())
                 )
-                .build(new ResourceLocation("accelerate", "high_speed_track"));
+                .build(Accelerate.asResource("high_speed_track"));
 
         // COBALT
         Advancement cobalt_ingot = Advancement.Builder.advancement()
@@ -43,7 +43,7 @@ public class AdvancementGen {
                 .addCriterion("has_cobalt_ingot",
                         InventoryChangeTrigger.TriggerInstance.hasItems(AItems.COBALT_INGOT)
                 )
-                .build(new ResourceLocation("accelerate","cobalt_ingot"));
+                .build(Accelerate.asResource("cobalt_ingot"));
 
         // MAGNETS
         Advancement magnetized_cobalt_ingot = Advancement.Builder.advancement()
@@ -59,7 +59,7 @@ public class AdvancementGen {
                 .addCriterion("has_magnetized_cobalt_ingot",
                         InventoryChangeTrigger.TriggerInstance.hasItems(AItems.MAGNETIZED_COBALT_INGOT)
                 )
-                .build(new ResourceLocation("accelerate","magnetized_cobalt_ingot"));
+                .build(Accelerate.asResource("magnetized_cobalt_ingot"));
 
         Advancement maglev_track = Advancement.Builder.advancement()
                 .parent(magnetized_cobalt_ingot)
@@ -74,7 +74,7 @@ public class AdvancementGen {
                 .addCriterion("has_maglev_track",
                         InventoryChangeTrigger.TriggerInstance.hasItems(ABlocks.MAGLEV_TRACK_BLOCK.asItem())
                 )
-                .build(new ResourceLocation("accelerate","maglev_track"));
+                .build(Accelerate.asResource("maglev_track"));
 
         // REGISTER
         consumer.accept(high_speed_track);

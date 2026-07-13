@@ -5,7 +5,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import onelink.accelerate.Accelerate;
@@ -15,7 +14,7 @@ public class ACreativeTabsImpl {
     public static ResourceKey<CreativeModeTab> getBaseTab() {
         return ResourceKey.create(
                 Registries.CREATIVE_MODE_TAB,
-                new ResourceLocation("accelerate", "main")
+                Accelerate.asResource("main")
         );
     }
 
