@@ -39,7 +39,7 @@ public class GenTrackTags {
         );
     }
 
-    private static void genBlockTags(RegistrateTagsProvider<Block> provider) {
+    private static void generateBlockTags(RegistrateTagsProvider<Block> provider) {
         TagGen.CreateTagsProvider<Block> blockProvider = new TagGen.CreateTagsProvider<>(provider, block -> (net.minecraft.core.Holder.Reference<Block>) BuiltInRegistries.BLOCK.wrapAsHolder(block));
 
         // Merge your block tag with another mod's tag list
@@ -56,7 +56,7 @@ public class GenTrackTags {
                 );
     }
 
-    private static void genItemTags(RegistrateTagsProvider<Item> provider) {
+    private static void generateItemTags(RegistrateTagsProvider<Item> provider) {
         TagGen.CreateTagsProvider<Item> itemProvider = new TagGen.CreateTagsProvider<>(provider, item -> (net.minecraft.core.Holder.Reference<Item>) BuiltInRegistries.ITEM.wrapAsHolder(item));
 
         // Add two items from your mod
@@ -70,7 +70,7 @@ public class GenTrackTags {
 
     public static void register() {
         // Register block and item tag generators
-        Accelerate.REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, GenTrackTags::genBlockTags);
-        Accelerate.REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, GenTrackTags::genItemTags);
+        Accelerate.REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, GenTrackTags::generateBlockTags);
+        Accelerate.REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, GenTrackTags::generateItemTags);
     }
 }
