@@ -1,7 +1,18 @@
 {
+  "accelerate.creative_tab.main": "ǝʇɐɹǝןǝɔɔⱯ :ǝʇɐǝɹƆ",
+  "advancement.accelerate.cobalt_ingot.description": "ɹǝddoɔ ɯoɹɟ ʇןɐqoɔ uıɐʇqO",
+  "advancement.accelerate.cobalt_ingot.title": "pɐǝɥⱯ buıbɹoℲ",
+  "advancement.accelerate.high_speed_track.description": "ʞɔɐɹʇ pǝǝds ɥbıɥ ɐ uıɐʇqO",
+  "advancement.accelerate.high_speed_track.title": "pɹɐʍuO buıʇɐɹǝןǝɔɔⱯ",
+  "advancement.accelerate.maglev_track.description": "ʞɔɐɹʇ ʌǝןbɐɯ ɐ uıɐʇqO",
+  "advancement.accelerate.maglev_track.title": "sןıɐᴚ ǝɥʇ puoʎǝᗺ",
+  "advancement.accelerate.magnetized_cobalt_ingot.description": "ɹǝuɹnq ǝzɐןq ɐ ɥʇıʍ ʇןɐqoɔ ǝzıʇǝubɐW",
+  "advancement.accelerate.magnetized_cobalt_ingot.title": "¡S⟘ƎN⅁ⱯW",
   "block.accelerate.automated_driving_module": "ǝןnpoW buıʌıɹᗡ pǝʇɐɯoʇnⱯ",
   "block.accelerate.cobalt_block": "ʇןɐqoƆ ɟo ʞɔoןᗺ",
+  "block.accelerate.high_speed_railway_casing": "buısɐƆ uıɐɹ⟘ pǝǝdS ɥbıH",
   "block.accelerate.high_speed_track": "ʞɔɐɹ⟘ pǝǝdS ɥbıH",
+  "block.accelerate.maglev_railway_casing": "buısɐƆ uıɐɹ⟘ ʌǝןbɐW",
   "block.accelerate.maglev_track": "ʞɔɐɹ⟘ ʌǝןbɐW",
   "block.accelerate.raw_cobalt_block": "ʇןɐqoƆ ʍɐᴚ ɟo ʞɔoןᗺ",
   "item.accelerate.automated_driver": "ɹǝʌıɹᗡ pǝʇɐɯoʇnⱯ",
@@ -10,5 +21,7 @@
   "item.accelerate.incomplete_high_speed_track": "ʞɔɐɹ⟘ pǝǝdS ɥbıH ǝʇǝןdɯoɔuI",
   "item.accelerate.incomplete_maglev_track": "ʞɔɐɹ⟘ ʌǝןbɐW ǝʇǝןdɯoɔuI",
   "item.accelerate.magnetized_cobalt_ingot": "ʇobuI ʇןɐqoƆ pǝzıʇǝubɐW",
-  "item.accelerate.raw_cobalt": "ʇןɐqoƆ ʍɐᴚ"
+  "item.accelerate.raw_cobalt": "ʇןɐqoƆ ʍɐᴚ",
+  "tag.accelerate.cobalt_ingots": "sʇobuI ʇןɐqoƆ",
+  "tag.accelerate.high_speed_concrete": "ǝʇǝɹɔuoƆ pǝǝdS ɥbıH"
 }
