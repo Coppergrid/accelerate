@@ -8,7 +8,8 @@
   ],
   "mixins": [
     "TrackRadiusMixin",
-    "TrainStatsMixin"
+    "TrainStatsMixin",
+    "TrainTypeMixin"
   ],
   "injectors": {
     "defaultRequire": 1
