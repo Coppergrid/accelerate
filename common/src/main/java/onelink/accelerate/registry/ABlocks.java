@@ -15,6 +15,7 @@ import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBeh
 
 public class ABlocks {
 
+    // TRACK BLOCKS
     public static final BlockEntry<TrackBlock> HIGH_SPEED_TRACK_BLOCK = Accelerate.REGISTRATE.block("high_speed_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), ATrackMaterials.HIGH_SPEED))
             .tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
             .tag(AllBlockTags.TRACKS.tag)
@@ -35,6 +36,7 @@ public class ABlocks {
 			.build()
 			.register();
 
+    // STANDARD BLOCKS
     public static final BlockEntry<Block> RAW_COBALT_BLOCK = Accelerate.REGISTRATE.block("raw_cobalt_block", Block::new)
             .item(BlockItem::new)
             .lang("Block of Raw Cobalt")
