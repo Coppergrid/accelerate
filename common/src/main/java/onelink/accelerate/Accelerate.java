@@ -4,6 +4,7 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.resources.ResourceLocation;
 import onelink.accelerate.registry.ABlockEntityTypes;
 import onelink.accelerate.registry.ABlocks;
+import onelink.accelerate.registry.ABogeyStyles;
 import onelink.accelerate.registry.AItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +29,9 @@ public class Accelerate {
         ABlocks.init(); // hold registrate in a separate class to avoid loading early on forge
         AItems.init(); // hold registrate in a separate class to avoid loading early on forge
         ABlockEntityTypes.init();
+
+        // Bogey Specific
+        ABogeyStyles.init();
 
         // load config
 
