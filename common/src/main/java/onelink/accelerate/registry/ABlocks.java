@@ -1,8 +1,10 @@
 package onelink.accelerate.registry;
 
+import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.content.trains.track.TrackBlock;
 import com.simibubi.create.content.trains.track.TrackBlockItem;
 import com.simibubi.create.AllTags.AllBlockTags;
+import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
@@ -35,6 +37,23 @@ public class ABlocks {
             .lang("Maglev Track")
 			.build()
 			.register();
+
+    // CASING BLOCKS
+    public static final BlockEntry<CasingBlock> HIGH_SPEED_RAILWAY_CASING = Accelerate.REGISTRATE.block("high_speed_railway_casing", CasingBlock::new)
+            .transform(BuilderTransformers.layeredCasing(() -> ASpriteShifts.HIGH_SPEED_RAILWAY_CASING_SIDE,
+                    () -> ASpriteShifts.HIGH_SPEED_RAILWAY_CASING))
+            .properties(properties -> properties.sound(SoundType.NETHERITE_BLOCK))
+            .tag(AllBlockTags.CASING.tag)
+            .lang("High Speed Train Casing")
+            .register();
+
+    public static final BlockEntry<CasingBlock> MAGLEV_RAILWAY_CASING = Accelerate.REGISTRATE.block("maglev_railway_casing", CasingBlock::new)
+            .transform(BuilderTransformers.layeredCasing(() -> ASpriteShifts.MAGLEV_RAILWAY_CASING_SIDE,
+                    () -> ASpriteShifts.MAGLEV_RAILWAY_CASING))
+            .properties(properties -> properties.sound(SoundType.NETHERITE_BLOCK))
+            .tag(AllBlockTags.CASING.tag)
+            .lang("Maglev Train Casing")
+            .register();
 
     // STANDARD BLOCKS
     public static final BlockEntry<Block> RAW_COBALT_BLOCK = Accelerate.REGISTRATE.block("raw_cobalt_block", Block::new)

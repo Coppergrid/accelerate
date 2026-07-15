@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "accelerate:high_speed_railway_casing",
+    "accelerate:maglev_railway_casing"
+  ]
+}
