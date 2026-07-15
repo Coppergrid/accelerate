@@ -23,6 +23,7 @@ public class Accelerate {
 
     public static void init() {
         LOGGER.info("{} initializing! Version {} on {} loader.", NAME, Accelerate.VERSION, AExpectPlatform.platformName());
+        // General Purpose
         ABlocks.init(); // hold registrate in a separate class to avoid loading early on forge
         AItems.init(); // hold registrate in a separate class to avoid loading early on forge
 
