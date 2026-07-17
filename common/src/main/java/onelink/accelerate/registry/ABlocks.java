@@ -1,6 +1,7 @@
 package onelink.accelerate.registry;
 
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
+import com.simibubi.create.content.trains.bogey.BogeySizes;
 import com.simibubi.create.content.trains.track.TrackBlock;
 import com.simibubi.create.content.trains.track.TrackBlockItem;
 import com.simibubi.create.AllTags.AllBlockTags;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import onelink.accelerate.Accelerate;
+import onelink.accelerate.content.bogey.HighSpeedBogeyBlock;
 import onelink.accelerate.content.components.AutomatedDrivingModule;
 import onelink.accelerate.datagen.CustomTrackBlockStateGenerator;
 
@@ -53,6 +55,15 @@ public class ABlocks {
             .properties(properties -> properties.sound(SoundType.NETHERITE_BLOCK))
             .tag(AllBlockTags.CASING.tag)
             .lang("Maglev Train Casing")
+            .register();
+
+    // BOGEY BLOCKS
+    public static final BlockEntry<HighSpeedBogeyBlock> SMALL_HIGH_SPEED_BOGEY = Accelerate.REGISTRATE.block("small_high_speed_bogey", p -> new HighSpeedBogeyBlock(p, BogeySizes.SMALL))
+            .transform(ABuilderTransformers.highSpeedBogey())
+            .register();
+
+    public static final BlockEntry<HighSpeedBogeyBlock> LARGE_HIGH_SPEED_BOGEY = Accelerate.REGISTRATE.block("large_high_speed_bogey", p -> new HighSpeedBogeyBlock(p, BogeySizes.LARGE))
+            .transform(ABuilderTransformers.highSpeedBogey())
             .register();
 
     // STANDARD BLOCKS
