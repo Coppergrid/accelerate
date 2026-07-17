@@ -2,6 +2,13 @@ package onelink.accelerate.content.track;
 
 import com.simibubi.create.content.trains.track.TrackBlock;
 import com.simibubi.create.content.trains.track.TrackMaterial;
+import com.simibubi.create.content.trains.track.TrackShape;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction.Axis;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import onelink.accelerate.registry.ABlocks;
 import onelink.accelerate.registry.ATrackMaterials;
 
 public class HighSpeedTrackBlock extends TrackBlock {
@@ -12,5 +19,11 @@ public class HighSpeedTrackBlock extends TrackBlock {
     @Override
     public TrackMaterial getMaterial() {
         return ATrackMaterials.HIGH_SPEED;
+    }
+
+    @Override
+    public BlockState getBogeyAnchor(BlockGetter world, BlockPos pos, BlockState state) {
+        return ABlocks.SMALL_HIGH_SPEED_BOGEY.getDefaultState()
+                .setValue(BlockStateProperties.HORIZONTAL_AXIS, state.getValue(SHAPE) == TrackShape.XO ? Axis.X : Axis.Z);
     }
 }
