@@ -2,7 +2,6 @@ package onelink.accelerate.registry;
 
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.content.trains.bogey.BogeySizes;
-import com.simibubi.create.content.trains.track.TrackBlock;
 import com.simibubi.create.content.trains.track.TrackBlockItem;
 import com.simibubi.create.AllTags.AllBlockTags;
 import com.simibubi.create.foundation.data.BuilderTransformers;
@@ -13,6 +12,8 @@ import net.minecraft.world.level.block.SoundType;
 import onelink.accelerate.Accelerate;
 import onelink.accelerate.content.bogey.HighSpeedBogeyBlock;
 import onelink.accelerate.content.components.AutomatedDrivingModule;
+import onelink.accelerate.content.track.HighSpeedTrackBlock;
+import onelink.accelerate.content.track.MaglevTrackBlock;
 import onelink.accelerate.datagen.CustomTrackBlockStateGenerator;
 
 import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour.interactionBehaviour;
@@ -20,7 +21,7 @@ import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBeh
 public class ABlocks {
 
     // TRACK BLOCKS
-    public static final BlockEntry<TrackBlock> HIGH_SPEED_TRACK_BLOCK = Accelerate.REGISTRATE.block("high_speed_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), ATrackMaterials.HIGH_SPEED))
+    public static final BlockEntry<HighSpeedTrackBlock> HIGH_SPEED_TRACK_BLOCK = Accelerate.REGISTRATE.block("high_speed_track", HighSpeedTrackBlock::new)
             .tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
             .tag(AllBlockTags.TRACKS.tag)
             .tag(AllBlockTags.GIRDABLE_TRACKS.tag)
@@ -30,7 +31,7 @@ public class ABlocks {
             .build()
             .register();
 
-    public static final BlockEntry<TrackBlock> MAGLEV_TRACK_BLOCK = Accelerate.REGISTRATE.block("maglev_track", properties -> new TrackBlock(Block.Properties.of().strength(2.0f), ATrackMaterials.MAGLEV))
+    public static final BlockEntry<MaglevTrackBlock> MAGLEV_TRACK_BLOCK = Accelerate.REGISTRATE.block("maglev_track", MaglevTrackBlock::new)
 			.tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
 			.tag(AllBlockTags.TRACKS.tag)
 			.tag(AllBlockTags.GIRDABLE_TRACKS.tag)
