@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[${forge_version},)"
-issueTrackerURL = "https://github.com/CircuitScoutDev/accelerate/issues"
+issueTrackerURL = "https://github.com/Coppergrid/accelerate/issues"
 license = "CC BY-NC-SA 4.0"
 
 [[mods]]

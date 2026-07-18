@@ -10,8 +10,8 @@
   ],
   "contact": {
     "homepage": "https://modrinth.com/project/create-accelerate",
-    "issues": "https://github.com/CircuitScoutDev/accelerate/issues",
-    "sources": "https://github.com/CircuitScoutDev/accelerate"
+    "issues": "https://github.com/Coppergrid/accelerate/issues",
+    "sources": "https://github.com/Coppergrid/accelerate"
   },
   "license": "CC BY-NC-SA 4.0",
   "icon": "assets/accelerate/acceleratelogo.png",
