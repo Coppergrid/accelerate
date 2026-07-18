@@ -1,11 +1,9 @@
 package coppergrid.accelerate.registry;
 
-import com.simibubi.create.content.trains.bogey.AbstractBogeyBlock;
 import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.builders.BlockBuilder;
 import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
-import net.createmod.catnip.platform.CatnipServices;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import coppergrid.accelerate.content.bogey.HighSpeedBogeyBlock;
@@ -14,7 +12,7 @@ import static com.simibubi.create.foundation.data.TagGen.pickaxeOnly;
 
 public class ABuilderTransformers {
 
-    public static <B extends AbstractBogeyBlock, P> NonNullUnaryOperator<BlockBuilder<HighSpeedBogeyBlock, P>> highSpeedBogey() {
+    public static <P> NonNullUnaryOperator<BlockBuilder<HighSpeedBogeyBlock, P>> highSpeedBogey() {
         return b -> b.initialProperties(SharedProperties::softMetal)
                 .properties(p -> p.sound(SoundType.NETHERITE_BLOCK))
                 .properties(BlockBehaviour.Properties::noOcclusion)
