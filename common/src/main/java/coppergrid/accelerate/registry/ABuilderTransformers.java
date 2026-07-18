@@ -21,8 +21,6 @@ public class ABuilderTransformers {
                 .transform(pickaxeOnly())
                 .blockstate((c, p) -> BlockStateGen.horizontalAxisBlock(c, p, s -> p.models()
                         .getExistingFile(p.modLoc("block/bogey/high_speed/top"))))
-                .loot((p, l) -> p.dropOther(l, ABlocks.HIGH_SPEED_RAILWAY_CASING.get()))
-                .onRegister(
-                        block -> AbstractBogeyBlock.registerStandardBogey(CatnipServices.REGISTRIES.getKeyOrThrow(block)));
+                .loot((p, l) -> p.dropOther(l, ABlocks.HIGH_SPEED_RAILWAY_CASING.get()));
     }
 }
