@@ -8,6 +8,7 @@
   ],
   "mixins": [
     "TrackRadiusMixin",
+    "TrainAssemblyMixin",
     "TrainStatsMixin",
     "TrainTypeMixin"
   ],
