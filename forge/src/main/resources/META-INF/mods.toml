@@ -8,7 +8,7 @@ modId = "accelerate"
 version = "${version}"
 displayName = "Create: Accelerate"
 displayURL = "https://modrinth.com/project/create-accelerate"
-authors = "OneLink, BlahajTheShark14"
+authors = "CircuitScout, BlahajTheShark14"
 description = '''
 Create: Accelerate is an addon for create that adds many high-speed rail features, including a new type of rail, maglev, which allows for higher speeds than normal tracks.
 '''
