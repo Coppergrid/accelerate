@@ -23,7 +23,7 @@ public enum TrainType {
         return switch (this) {
             case HIGH_SPEED -> AConfig.SERVER.HighSpeedAccelMultiplier.get();
             case MAGLEV -> AConfig.SERVER.MaglevAccelMultiplier.get();
-            case null, default -> 1.0;
+            default -> 1.0;
         };
     }
 
