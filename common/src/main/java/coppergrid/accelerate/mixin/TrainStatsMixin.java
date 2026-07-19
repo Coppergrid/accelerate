@@ -3,12 +3,17 @@ package coppergrid.accelerate.mixin;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.simibubi.create.content.trains.entity.Train;
 import coppergrid.accelerate.config.AConfig;
+import coppergrid.accelerate.infrastructure.train.TrainType;
+import coppergrid.accelerate.infrastructure.train.TrainTypeStorage;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(value = Train.class, remap = false)
 public abstract class TrainStatsMixin {
+
+    @Unique
+    Train accelerate$train = (Train) (Object) this;
 
     @Unique
     boolean create_accelerate$onHighSpeedTrack = AConfig.SERVER.DevMode.get(); // TEMPORARY - DEV TESTING
@@ -18,15 +23,8 @@ public abstract class TrainStatsMixin {
 
     @ModifyReturnValue(method = "acceleration", at = @At("RETURN"))
     private float accelerate$modifyAcceleration(float original) {
-        if (create_accelerate$onHighSpeedTrack) {
-            return (float) (original * AConfig.SERVER.HighSpeedAccelMultiplier.get());
-        }
-        else if (create_accelerate$onMaglevTrack) {
-            return (float) (original * AConfig.SERVER.MaglevAccelMultiplier.get());
-        }
-        else {
-            return original;
-        }
+        TrainType trainType = TrainTypeStorage.get(accelerate$train);
+        return (float) (original * trainType.accelerationMultiplier());
     }
 
     @ModifyReturnValue(method = "maxSpeed", at = @At("RETURN"))
