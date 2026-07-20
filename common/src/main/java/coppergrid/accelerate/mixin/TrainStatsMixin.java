@@ -2,12 +2,10 @@ package coppergrid.accelerate.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.simibubi.create.content.trains.entity.Train;
-import coppergrid.accelerate.config.AConfig;
 import coppergrid.accelerate.infrastructure.track.TrackHelper;
 import coppergrid.accelerate.infrastructure.train.TrainType;
 import coppergrid.accelerate.infrastructure.train.TrainTypeStorage;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(value = Train.class, remap = false)
