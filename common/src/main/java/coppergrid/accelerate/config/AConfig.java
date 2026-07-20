@@ -4,8 +4,6 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public class AConfig {
     public static class Server {
-        public final ForgeConfigSpec.BooleanValue DevMode;
-
         public final ForgeConfigSpec.DoubleValue HighSpeedTrainAccelMultiplier;
         public final ForgeConfigSpec.DoubleValue MaglevTrainAccelMultiplier;
 
@@ -23,8 +21,6 @@ public class AConfig {
         Server(ForgeConfigSpec.Builder builder) {
             builder.push("Trains");
             builder.push("TrainStats");
-            DevMode = builder.comment("For testing purposes only. Applies high speed train parameters to ALL TRAINS. Use with caution. (Requires world restart)")
-                    .define("devMode", false);
             builder.push("Acceleration");
             HighSpeedTrainAccelMultiplier = builder.comment("Acceleration Multiplier for High Speed Trains")
                     .defineInRange("highSpeedTrainAccelMultiplier", 1.5, 0.1, Double.MAX_VALUE);
