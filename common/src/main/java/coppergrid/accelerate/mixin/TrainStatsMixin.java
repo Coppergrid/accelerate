@@ -13,9 +13,6 @@ import org.spongepowered.asm.mixin.injection.At;
 public abstract class TrainStatsMixin {
 
     @Unique
-    Train accelerate$train = (Train) (Object) this;
-
-    @Unique
     boolean create_accelerate$onHighSpeedTrack = AConfig.SERVER.DevMode.get(); // TEMPORARY - DEV TESTING
 
     @Unique
@@ -23,7 +20,8 @@ public abstract class TrainStatsMixin {
 
     @ModifyReturnValue(method = "acceleration", at = @At("RETURN"))
     private float accelerate$modifyAcceleration(float original) {
-        TrainType trainType = TrainTypeStorage.get(accelerate$train);
+        Train train = (Train) (Object) this;
+        TrainType trainType = TrainTypeStorage.get(train);
         return (float) (original * trainType.accelerationMultiplier());
     }
 
