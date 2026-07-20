@@ -11,5 +11,7 @@
   "advancement.accelerate.maglev_track.title": "Beyond the Rails",
   "advancement.accelerate.maglev_track.description": "Obtain a maglev track",
 
-  "accelerate.creative_tab.main": "Create: Accelerate"
+  "accelerate.creative_tab.main": "Create: Accelerate",
+
+  "error.accelerate.mixed_bogey_types": "All bogeys in a train must be the same type"
 }
