@@ -7,6 +7,14 @@
 6. Implement Maglev using the same assembly pipeline
 7. Add Maglev-specific mechanics and polish
 
+#### Step 4
+1. ✅ TrackHelper.getCurrentTrackMaterial(Train)
+2. → TrackHelper.getTrackSpeedMultiplier(Train)
+3. Test detection/logging 
+4. Modify TrainStatsMixin 
+5. Add mixed-track handling 
+6. Add caching only if needed
+
 ### Dev Changes
 1. Enum carries behavior
 ```java
