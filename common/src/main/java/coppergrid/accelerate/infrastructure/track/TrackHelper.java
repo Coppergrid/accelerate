@@ -12,10 +12,10 @@ public class TrackHelper {
 
     public static double getSpeedMultiplier(TrackMaterial trackMaterial) {
         if (trackMaterial == ATrackMaterials.HIGH_SPEED)
-            return AConfig.SERVER.HighSpeedSpeedMultiplier.get();
+            return AConfig.SERVER.HighSpeedTrackSpeedMultiplier.get();
 
         if (trackMaterial == ATrackMaterials.MAGLEV)
-            return AConfig.SERVER.MaglevSpeedMultiplier.get();
+            return AConfig.SERVER.MaglevTrackSpeedMultiplier.get();
 
         return 1.0;
     }

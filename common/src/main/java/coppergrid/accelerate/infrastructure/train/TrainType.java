@@ -21,8 +21,8 @@ public enum TrainType {
 
     public double accelerationMultiplier() {
         return switch (this) {
-            case HIGH_SPEED -> AConfig.SERVER.HighSpeedAccelMultiplier.get();
-            case MAGLEV -> AConfig.SERVER.MaglevAccelMultiplier.get();
+            case HIGH_SPEED -> AConfig.SERVER.HighSpeedTrainAccelMultiplier.get();
+            case MAGLEV -> AConfig.SERVER.MaglevTrainAccelMultiplier.get();
             default -> 1.0;
         };
     }
@@ -30,8 +30,8 @@ public enum TrainType {
     public double speedMultiplier() {
         return switch (this) {
             case NORMAL -> 1.0;
-            case HIGH_SPEED -> AConfig.SERVER.HighSpeedSpeedMultiplier.get();
-            case MAGLEV -> AConfig.SERVER.MaglevSpeedMultiplier.get();
+            case HIGH_SPEED -> AConfig.SERVER.HighSpeedTrainSpeedMultiplier.get();
+            case MAGLEV -> AConfig.SERVER.MaglevTrainSpeedMultiplier.get();
 
         };
     }

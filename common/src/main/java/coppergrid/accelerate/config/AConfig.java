@@ -6,12 +6,14 @@ public class AConfig {
     public static class Server {
         public final ForgeConfigSpec.BooleanValue DevMode;
 
-        public final ForgeConfigSpec.DoubleValue HighSpeedAccelMultiplier;
-        public final ForgeConfigSpec.DoubleValue MaglevAccelMultiplier;
+        public final ForgeConfigSpec.DoubleValue HighSpeedTrainAccelMultiplier;
+        public final ForgeConfigSpec.DoubleValue MaglevTrainAccelMultiplier;
 
-        public final ForgeConfigSpec.DoubleValue HighSpeedSpeedMultiplier;
-        public final ForgeConfigSpec.DoubleValue MaglevSpeedMultiplier;
+        public final ForgeConfigSpec.DoubleValue HighSpeedTrainSpeedMultiplier;
+        public final ForgeConfigSpec.DoubleValue MaglevTrainSpeedMultiplier;
 
+        public final ForgeConfigSpec.DoubleValue HighSpeedTrackSpeedMultiplier;
+        public final ForgeConfigSpec.DoubleValue MaglevTrackSpeedMultiplier;
 
         public final ForgeConfigSpec.BooleanValue HighSpeedRealisticRadius;
         public final ForgeConfigSpec.BooleanValue MaglevRealisticRadius;
@@ -24,20 +26,21 @@ public class AConfig {
             DevMode = builder.comment("For testing purposes only. Applies high speed train parameters to ALL TRAINS. Use with caution. (Requires world restart)")
                     .define("devMode", false);
             builder.push("Acceleration");
-            HighSpeedAccelMultiplier = builder.comment("Acceleration Multiplier for High Speed Trains")
-                    .defineInRange("highSpeedAccelMultiplier", 1.5, 0.1, Double.MAX_VALUE);
-            MaglevAccelMultiplier = builder.comment("Acceleration Multiplier for Maglev Trains")
-                    .defineInRange("maglevAccelMultiplier", 2.5, 0.1, Double.MAX_VALUE);
+            HighSpeedTrainAccelMultiplier = builder.comment("Acceleration Multiplier for High Speed Trains")
+                    .defineInRange("highSpeedTrainAccelMultiplier", 1.5, 0.1, Double.MAX_VALUE);
+            MaglevTrainAccelMultiplier = builder.comment("Acceleration Multiplier for Maglev Trains")
+                    .defineInRange("maglevTrainAccelMultiplier", 2.5, 0.1, Double.MAX_VALUE);
             builder.pop();
             builder.push("Speed");
-            HighSpeedSpeedMultiplier = builder.comment("Speed Multiplier for High Speed Trains")
-                    .defineInRange("highSpeedSpeedMultiplier", 2, 0.1, Double.MAX_VALUE);
-            MaglevSpeedMultiplier = builder.comment("Speed Multiplier for Maglev Trains")
-                    .defineInRange("maglevSpeedMultiplier", 3, 0.1, Double.MAX_VALUE);
+            HighSpeedTrainSpeedMultiplier = builder.comment("Speed Multiplier for High Speed Trains")
+                    .defineInRange("highSpeedTrainSpeedMultiplier", 2, 0.1, Double.MAX_VALUE);
+            MaglevTrainSpeedMultiplier = builder.comment("Speed Multiplier for Maglev Trains")
+                    .defineInRange("maglevTrainSpeedMultiplier", 3, 0.1, Double.MAX_VALUE);
             builder.pop();
             builder.pop();
             builder.pop();
             builder.push("Tracks");
+            builder.push("TrackStats");
             builder.push("CurveRadius");
             HighSpeedRealisticRadius = builder.comment("Force Realistic Radii for High Speed Tracks")
                     .define("highSpeedRealisticRadius",true);
@@ -47,6 +50,13 @@ public class AConfig {
                     .define("maglevRealisticRadius", true);
             MaglevRadiusMultiplier = builder.comment("Radius Multiplier for Maglev Tracks")
                     .defineInRange("maglevRadiusMultiplier", 18, 1, 36.0);
+            builder.pop();
+            builder.push("Speed");
+            HighSpeedTrackSpeedMultiplier = builder.comment("Speed Multiplier for High Speed Tracks")
+                    .defineInRange("highSpeedTrackSpeedMultiplier", 2, 0.1, Double.MAX_VALUE);
+            MaglevTrackSpeedMultiplier = builder.comment("Speed Multiplier for Maglev Tracks")
+                    .defineInRange("maglevTrackSpeedMultiplier", 3, 0.1, Double.MAX_VALUE);
+            builder.pop();
             builder.pop();
             builder.pop();
         }
