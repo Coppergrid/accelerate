@@ -61,7 +61,7 @@ public class TrainAssemblyMixin {
     }
 
     @WrapOperation(method = "assemble", at = @At(value = "NEW", target = "com/simibubi/create/content/trains/entity/Train"), remap = false)
-    private Train accelerate$createTrain(UUID id, UUID owner, TrackGraph graph, List<Carriage> carriages, List<Integer> carriageSpacing, boolean doubleEnded, Operation<Train> original) {
+    private Train accelerate$registerTrainType(UUID id, UUID owner, TrackGraph graph, List<Carriage> carriages, List<Integer> carriageSpacing, boolean doubleEnded, Operation<Train> original) {
         Train train = original.call(id, owner, graph, carriages, carriageSpacing, doubleEnded);
         if (accelerate$pendingTrainType != null) {
             TrainTypeStorage.set(train, accelerate$pendingTrainType);
