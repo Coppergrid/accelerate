@@ -6,8 +6,6 @@ import coppergrid.accelerate.config.AConfig;
 import coppergrid.accelerate.registry.ATrackMaterials;
 import org.apache.commons.lang3.mutable.MutableDouble;
 
-import java.util.concurrent.atomic.AtomicReference;
-
 public class TrackHelper {
 
     public static double getSpeedMultiplier(TrackMaterial trackMaterial) {
