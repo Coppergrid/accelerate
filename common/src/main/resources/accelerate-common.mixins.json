@@ -8,6 +8,7 @@
   ],
   "mixins": [
     "BogeyPlacementMixin",
+    "TrackCacheMixin",
     "TrackRadiusMixin",
     "TrainAssemblyMixin",
     "TrainStatsMixin",
