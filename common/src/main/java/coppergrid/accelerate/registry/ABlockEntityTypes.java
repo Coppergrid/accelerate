@@ -5,6 +5,7 @@ import com.simibubi.create.content.trains.bogey.BogeyBlockEntityVisual;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import coppergrid.accelerate.Accelerate;
 import coppergrid.accelerate.content.bogey.HighSpeedBogeyBlockEntity;
+import coppergrid.accelerate.content.bogey.MaglevBogeyBlockEntity;
 
 public class ABlockEntityTypes {
 
@@ -13,6 +14,13 @@ public class ABlockEntityTypes {
             .visual(() -> BogeyBlockEntityVisual::new, false)
             .renderer(() -> BogeyBlockEntityRenderer::new)
             .validBlocks(ABlocks.SMALL_HIGH_SPEED_BOGEY, ABlocks.LARGE_HIGH_SPEED_BOGEY)
+            .register();
+
+    public static final BlockEntityEntry<MaglevBogeyBlockEntity> MAGLEV_BOGEY = Accelerate.REGISTRATE
+            .blockEntity("maglev_bogey", MaglevBogeyBlockEntity::new)
+            .visual(() -> BogeyBlockEntityVisual::new, false)
+            .renderer(() -> BogeyBlockEntityRenderer::new)
+            .validBlocks(ABlocks.SMALL_MAGLEV_BOGEY, ABlocks.LARGE_MAGLEV_BOGEY)
             .register();
 
     public static void init() {}

@@ -4,6 +4,7 @@ import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.builders.BlockBuilder;
 import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
+import coppergrid.accelerate.content.bogey.MaglevBogeyBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import coppergrid.accelerate.content.bogey.HighSpeedBogeyBlock;
@@ -20,5 +21,15 @@ public class ABuilderTransformers {
                 .blockstate((c, p) -> BlockStateGen.horizontalAxisBlock(c, p, s -> p.models()
                         .getExistingFile(p.modLoc("block/bogey/high_speed/top"))))
                 .loot((p, l) -> p.dropOther(l, ABlocks.HIGH_SPEED_RAILWAY_CASING.get()));
+    }
+
+    public static <P> NonNullUnaryOperator<BlockBuilder<MaglevBogeyBlock, P>> maglevBogey() {
+        return b -> b.initialProperties(SharedProperties::softMetal)
+                .properties(p -> p.sound(SoundType.NETHERITE_BLOCK))
+                .properties(BlockBehaviour.Properties::noOcclusion)
+                .transform(pickaxeOnly())
+                .blockstate((c, p) -> BlockStateGen.horizontalAxisBlock(c, p, s -> p.models()
+                        .getExistingFile(p.modLoc("block/bogey/maglev/top"))))
+                .loot((p, l) -> p.dropOther(l, ABlocks.MAGLEV_RAILWAY_CASING.get()));
     }
 }

@@ -6,6 +6,7 @@ import com.simibubi.create.content.trains.track.TrackBlockItem;
 import com.simibubi.create.AllTags.AllBlockTags;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import coppergrid.accelerate.content.bogey.MaglevBogeyBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -65,6 +66,14 @@ public class ABlocks {
 
     public static final BlockEntry<HighSpeedBogeyBlock> LARGE_HIGH_SPEED_BOGEY = Accelerate.REGISTRATE.block("large_high_speed_bogey", p -> new HighSpeedBogeyBlock(p, BogeySizes.LARGE))
             .transform(ABuilderTransformers.highSpeedBogey())
+            .register();
+
+    public static final BlockEntry<MaglevBogeyBlock> SMALL_MAGLEV_BOGEY = Accelerate.REGISTRATE.block("small_maglev_bogey", p -> new MaglevBogeyBlock(p, BogeySizes.SMALL))
+            .transform(ABuilderTransformers.maglevBogey())
+            .register();
+
+    public static final BlockEntry<MaglevBogeyBlock> LARGE_MAGLEV_BOGEY = Accelerate.REGISTRATE.block("large_maglev_bogey", p -> new MaglevBogeyBlock(p, BogeySizes.LARGE))
+            .transform(ABuilderTransformers.maglevBogey())
             .register();
 
     // STANDARD BLOCKS

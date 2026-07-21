@@ -2,6 +2,8 @@ package coppergrid.accelerate.registry;
 
 import com.simibubi.create.content.trains.bogey.BogeySizes;
 import com.simibubi.create.content.trains.bogey.BogeyStyle;
+import coppergrid.accelerate.content.bogey.MaglevBogeyRenderer;
+import coppergrid.accelerate.content.bogey.MaglevBogeyVisual;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import coppergrid.accelerate.Accelerate;
@@ -10,9 +12,6 @@ import coppergrid.accelerate.content.bogey.HighSpeedBogeyVisual;
 import org.jetbrains.annotations.ApiStatus;
 
 public class ABogeyStyles {
-//    public static final Map<ResourceLocation, BogeyStyle> BOGEY_STYLES = new HashMap<>();
-//    public static final Map<ResourceLocation, Map<ResourceLocation, BogeyStyle>> CYCLE_GROUPS = new HashMap<>();
-//    private static final Map<ResourceLocation, BogeyStyle> EMPTY_GROUP = Collections.emptyMap();
 
     public static final ResourceLocation HIGH_SPEED_CYCLE_GROUP = Accelerate.asResource("high_speed");
 
@@ -22,9 +21,13 @@ public class ABogeyStyles {
             .size(BogeySizes.LARGE, ABlocks.LARGE_HIGH_SPEED_BOGEY, () -> () -> new BogeyStyle.SizeRenderer(new HighSpeedBogeyRenderer.Large(), HighSpeedBogeyVisual.Large::new))
             .build();
 
-//    public static Map<ResourceLocation, BogeyStyle> getCycleGroup(ResourceLocation cycleGroup) {
-//        return CYCLE_GROUPS.getOrDefault(cycleGroup, EMPTY_GROUP);
-//    }
+    public static final ResourceLocation MAGLEV_CYCLE_GROUP = Accelerate.asResource("maglev");
+
+    public static final BogeyStyle MAGLEV
+            = builder("maglev", MAGLEV_CYCLE_GROUP).displayName(Component.translatable("accelerate.bogey.style.maglev"))
+            .size(BogeySizes.SMALL, ABlocks.SMALL_MAGLEV_BOGEY, () -> () -> new BogeyStyle.SizeRenderer(new MaglevBogeyRenderer.Small(), MaglevBogeyVisual.Small::new))
+            .size(BogeySizes.LARGE, ABlocks.LARGE_MAGLEV_BOGEY, () -> () -> new BogeyStyle.SizeRenderer(new MaglevBogeyRenderer.Large(), MaglevBogeyVisual.Large::new))
+            .build();
 
     private static BogeyStyle.Builder builder(String name, ResourceLocation cycleGroup) {
         return new BogeyStyle.Builder(Accelerate.asResource(name), cycleGroup);
