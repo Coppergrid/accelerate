@@ -2,7 +2,7 @@ package coppergrid.accelerate.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.simibubi.create.content.trains.entity.Train;
-import coppergrid.accelerate.infrastructure.track.TrackHelper;
+import coppergrid.accelerate.infrastructure.train.TrackCacheStorage;
 import coppergrid.accelerate.infrastructure.train.TrainType;
 import coppergrid.accelerate.infrastructure.train.TrainTypeStorage;
 import org.spongepowered.asm.mixin.Mixin;
@@ -26,7 +26,7 @@ public abstract class TrainStatsMixin {
 
         double trainSpeedMultiplier = trainType.speedMultiplier();
 
-        double trackSpeedMultiplier = TrackHelper.getCurrentTrackSpeedMultiplier(train);
+        double trackSpeedMultiplier = TrackCacheStorage.get(train).getSpeedMultiplier(train);
 
         return (float) (original * (Math.min(trainSpeedMultiplier, trackSpeedMultiplier)));
     }
@@ -39,7 +39,7 @@ public abstract class TrainStatsMixin {
 
         double trainSpeedMultiplier = trainType.speedMultiplier();
 
-        double trackSpeedMultiplier = TrackHelper.getCurrentTrackSpeedMultiplier(train);
+        double trackSpeedMultiplier = TrackCacheStorage.get(train).getSpeedMultiplier(train);
 
         return (float) (original * (Math.min(trainSpeedMultiplier, trackSpeedMultiplier)));
     }

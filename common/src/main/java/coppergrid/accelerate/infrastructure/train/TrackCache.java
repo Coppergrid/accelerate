@@ -1,30 +1,39 @@
 package coppergrid.accelerate.infrastructure.train;
 
-import com.simibubi.create.content.trains.graph.TrackEdge;
-import com.simibubi.create.content.trains.track.TrackMaterial;
+import com.simibubi.create.content.trains.entity.Train;
+import coppergrid.accelerate.infrastructure.track.TrackHelper;
 
 public class TrackCache {
 
-    private TrackEdge trackEdge;
-    private TrackMaterial trackMaterial;
+    private boolean valid = false;
+    private double speedMultiplier = 1.0;
+//    private TrackEdge trackEdge;
+//    private TrackMaterial trackMaterial;
+//
+//    public TrackEdge getTrackEdge() {
+//        return trackEdge;
+//    }
+//
+//    public TrackMaterial getTrackMaterial() {
+//        return trackMaterial;
+//    }
 
-    public TrackEdge getTrackEdge() {
-        return trackEdge;
+    public void invalidate() {
+        valid = false;
     }
 
-    public TrackMaterial getTrackMaterial() {
-        return trackMaterial;
-    }
-
-    public void updateCache(TrackEdge newEdge) {
-        if (newEdge != trackEdge) {
-            trackEdge = newEdge;
-            if (newEdge != null) {
-                trackMaterial = newEdge.getTrackMaterial();
-            } else {
-                trackMaterial = null;
-            }
+    public double getSpeedMultiplier(Train train) {
+        if (!valid) {
+            recalculateCache(train);
+            valid = true;
         }
+
+        return speedMultiplier;
+    }
+
+    private void recalculateCache(Train train) {
+        speedMultiplier = TrackHelper.getCurrentTrackSpeedMultiplier(train);
     }
 
 }
+
