@@ -19,6 +19,10 @@ public class BogeyPlacementMixin {
             return ABlocks.SMALL_HIGH_SPEED_BOGEY.getDefaultState()
                     .setValue(BlockStateProperties.HORIZONTAL_AXIS, original.getValue(BlockStateProperties.HORIZONTAL_AXIS));
         }
+        if (handItem.is(ABlocks.MAGLEV_RAILWAY_CASING.asItem())) {
+            return ABlocks.SMALL_MAGLEV_BOGEY.getDefaultState()
+                    .setValue(BlockStateProperties.HORIZONTAL_AXIS, original.getValue(BlockStateProperties.HORIZONTAL_AXIS));
+        }
         return original;
     }
 }
