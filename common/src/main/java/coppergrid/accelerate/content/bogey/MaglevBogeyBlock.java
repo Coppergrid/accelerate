@@ -18,8 +18,6 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
-import java.util.Properties;
-
 public class MaglevBogeyBlock extends AbstractBogeyBlock<MaglevBogeyBlockEntity>
         implements IBE<MaglevBogeyBlockEntity>, ProperWaterloggedBlock, SpecialBlockItemRequirement {
     public MaglevBogeyBlock(Properties props, BogeySizes.BogeySize size) {
