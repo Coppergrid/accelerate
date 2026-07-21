@@ -3,6 +3,7 @@ package coppergrid.accelerate.infrastructure.train;
 import com.simibubi.create.content.trains.bogey.AbstractBogeyBlock;
 import coppergrid.accelerate.config.AConfig;
 import coppergrid.accelerate.content.bogey.HighSpeedBogeyBlock;
+import coppergrid.accelerate.content.bogey.MaglevBogeyBlock;
 
 public enum TrainType {
     NORMAL,
@@ -13,8 +14,8 @@ public enum TrainType {
         if (bogey instanceof HighSpeedBogeyBlock)
             return HIGH_SPEED;
 
-//        if (bogey instanceof MaglevBogeyBlock)
-//            return MAGLEV;
+        if (bogey instanceof MaglevBogeyBlock)
+            return MAGLEV;
 
         return NORMAL;
     }
