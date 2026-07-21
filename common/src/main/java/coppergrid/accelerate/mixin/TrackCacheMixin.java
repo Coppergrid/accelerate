@@ -20,7 +20,7 @@ public class TrackCacheMixin implements ACacheInterface {
         return accelerate$trackCache;
     }
 
-    @Inject(method = "tick", at = @At("HEAD"))
+    @Inject(method = "tick", at = @At("TAIL"))
     private void accelerate$invalidateTrackCache(CallbackInfo ci) {
         Train train = (Train) (Object) this;
 
