@@ -4,6 +4,8 @@
     "accelerate:high_speed_railway_casing",
     "accelerate:maglev_railway_casing",
     "accelerate:small_high_speed_bogey",
-    "accelerate:large_high_speed_bogey"
+    "accelerate:large_high_speed_bogey",
+    "accelerate:small_maglev_bogey",
+    "accelerate:large_maglev_bogey"
   ]
 }
