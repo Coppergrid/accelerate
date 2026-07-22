@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "accelerate:charged_cobalt_ingot"
+    },
+    "D": {
+      "item": "accelerate:automated_driver"
+    },
+    "S": {
+      "item": "create:sturdy_sheet"
+    },
+    "T": {
+      "item": "create:railway_casing"
+    }
+  },
+  "pattern": [
+    "SCS",
+    "TDT",
+    "SCS"
+  ],
+  "result": {
+    "item": "accelerate:automated_driving_module"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "G": {
+      "item": "create:golden_sheet"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "Q": {
+      "item": "create:polished_rose_quartz"
+    }
+  },
+  "pattern": [
+    "AGA",
+    "QPQ",
+    "AGA"
+  ],
+  "result": {
+    "item": "accelerate:automated_driver"
+  },
+  "show_notification": true
+}
