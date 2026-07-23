@@ -20,6 +20,6 @@ public class DataGenEntry implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = gen.createPack();
         Accelerate.REGISTRATE.setupDatagen(pack, helper);
         pack.addProvider(AAdvancementProvider::new);
-        DataGen.register();
+        DataGen.register(pack);
     }
 }
