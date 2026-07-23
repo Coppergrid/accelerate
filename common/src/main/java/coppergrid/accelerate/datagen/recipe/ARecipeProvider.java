@@ -1,6 +1,5 @@
 package coppergrid.accelerate.datagen.recipe;
 
-import coppergrid.accelerate.Accelerate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -22,7 +21,6 @@ public abstract class ARecipeProvider extends RecipeProvider {
     @Override
     public void buildRecipes(@NotNull Consumer<FinishedRecipe> finishedRecipeConsumer) {
         all.forEach(c -> c.register(finishedRecipeConsumer));
-        Accelerate.LOGGER.info(getName() + " registered " + all.size() + " recipe" + (all.size() == 1 ? "" : "s"));
     }
 
     protected GeneratedRecipe register(GeneratedRecipe recipe) {
