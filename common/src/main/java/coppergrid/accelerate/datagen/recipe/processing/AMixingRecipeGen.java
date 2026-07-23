@@ -27,9 +27,6 @@ public class AMixingRecipeGen extends AProcessingRecipeGen {
                     .require(Items.REDSTONE)
                     .require(Items.REDSTONE)
                     .require(Items.REDSTONE)
-                    .require(Items.REDSTONE)
-                    .require(Items.REDSTONE)
-                    .require(Items.REDSTONE)
                     .output(AItems.MAGNETIZED_COBALT_INGOT)
                     .requiresHeat(HeatCondition.SUPERHEATED));
 
