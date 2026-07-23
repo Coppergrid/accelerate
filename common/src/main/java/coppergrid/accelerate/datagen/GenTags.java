@@ -4,6 +4,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import coppergrid.accelerate.registry.ABlocks;
 import coppergrid.accelerate.registry.AItems;
@@ -14,6 +15,8 @@ import com.tterrag.registrate.providers.RegistrateTagsProvider;
 
 public class GenTags {
     public static final TagKey<Item> COBALT_INGOTS = createItemTag("cobalt_ingots");
+    public static final TagKey<Item> HIGH_SPEED_CONCRETE = createItemTag("high_speed_concrete");
+
     public static final TagKey<Block> ACCELERATE_TRACKS = createBlockTag("track_items");
     public static final TagKey<Block> CREATE_TRACKS = createBlockTag("create", "tracks");
 
@@ -65,6 +68,26 @@ public class GenTags {
                         AItems.COBALT_INGOT.get(),
                         AItems.CHARGED_COBALT_INGOT.get(),
                         AItems.MAGNETIZED_COBALT_INGOT.get()
+                );
+
+        itemProvider.tag(HIGH_SPEED_CONCRETE)
+                .add(
+                        Items.WHITE_CONCRETE,
+                        Items.ORANGE_CONCRETE,
+                        Items.MAGENTA_CONCRETE,
+                        Items.LIGHT_BLUE_CONCRETE,
+                        Items.YELLOW_CONCRETE,
+                        Items.LIME_CONCRETE,
+                        Items.PINK_CONCRETE,
+                        Items.GRAY_CONCRETE,
+                        Items.LIGHT_GRAY_CONCRETE,
+                        Items.CYAN_CONCRETE,
+                        Items.PURPLE_CONCRETE,
+                        Items.BLUE_CONCRETE,
+                        Items.BROWN_CONCRETE,
+                        Items.GREEN_CONCRETE,
+                        Items.RED_CONCRETE,
+                        Items.BLACK_CONCRETE
                 );
     }
 
