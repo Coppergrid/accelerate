@@ -6,34 +6,33 @@
       "item": "accelerate:charged_cobalt_ingot"
     },
     {
-      "item": "minecraft:redstone"
-    },
-    {
-      "item": "minecraft:redstone"
-    },
-    {
-      "item": "minecraft:redstone"
-    },
-    {
-      "item": "minecraft:redstone"
-    },
-    {
-      "item": "minecraft:redstone"
-    },
-    {
-      "item": "minecraft:redstone"
-    },
-    {
       "item": "minecraft:iron_ingot"
     },
     {
       "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
     }
   ],
   "results": [
     {
-      "item": "accelerate:magnetized_cobalt_ingot",
-      "count": 1
+      "item": "accelerate:magnetized_cobalt_ingot"
     }
   ]
 }
