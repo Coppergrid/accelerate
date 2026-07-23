@@ -14,13 +14,13 @@ public class AMixingRecipeGen extends AProcessingRecipeGen {
 
     GeneratedRecipe
 
-            CHARGED_COBALT_INGOT = create(Accelerate.asResource("charged_cobalt_ingot"), builder -> builder
+            CHARGED_COBALT_INGOT = create(Accelerate.asResource("charged_cobalt_ingot_from_mixing"), builder -> builder
                     .require(AItems.COBALT_INGOT)
                     .require(Items.IRON_INGOT)
                     .output(AItems.CHARGED_COBALT_INGOT)
                     .requiresHeat(HeatCondition.HEATED)),
 
-            MAGNETIZED_COBALT_INGOT = create(Accelerate.asResource("magnetized_cobalt_ingot"), builder -> builder
+            MAGNETIZED_COBALT_INGOT = create(Accelerate.asResource("magnetized_cobalt_ingot_from_mixing"), builder -> builder
                     .require(AItems.CHARGED_COBALT_INGOT)
                     .require(Items.IRON_INGOT)
                     .require(Items.IRON_INGOT)
