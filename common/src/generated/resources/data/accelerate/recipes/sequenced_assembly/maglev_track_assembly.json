@@ -16,11 +16,9 @@
         {
           "item": "accelerate:incomplete_maglev_track"
         },
-        [
-          {
-            "item": "minecraft:iron_block"
-          }
-        ]
+        {
+          "item": "minecraft:iron_block"
+        }
       ],
       "results": [
         {
@@ -34,11 +32,9 @@
         {
           "item": "accelerate:incomplete_maglev_track"
         },
-        [
-          {
-            "item": "accelerate:magnetized_cobalt_ingot"
-          }
-        ]
+        {
+          "item": "accelerate:magnetized_cobalt_ingot"
+        }
       ],
       "results": [
         {
@@ -52,11 +48,9 @@
         {
           "item": "accelerate:incomplete_maglev_track"
         },
-        [
-          {
-            "item": "accelerate:magnetized_cobalt_ingot"
-          }
-        ]
+        {
+          "item": "accelerate:magnetized_cobalt_ingot"
+        }
       ],
       "results": [
         {
@@ -70,11 +64,9 @@
         {
           "item": "accelerate:incomplete_maglev_track"
         },
-        [
-          {
-            "item": "minecraft:iron_block"
-          }
-        ]
+        {
+          "item": "minecraft:iron_block"
+        }
       ],
       "results": [
         {
@@ -86,17 +78,17 @@
       "type": "create:pressing",
       "ingredients": [
         {
-          "item": "accelerate:incomplete_high_speed_track"
+          "item": "accelerate:incomplete_maglev_track"
         }
       ],
       "results": [
         {
-          "item": "accelerate:incomplete_high_speed_track"
+          "item": "accelerate:incomplete_maglev_track"
         }
       ]
     }
   ],
   "transitionalItem": {
-    "item": "accelerate:incomplete_high_speed_track"
+    "item": "accelerate:incomplete_maglev_track"
   }
 }

@@ -1,6 +1,7 @@
 package coppergrid.accelerate.datagen;
 
 
+import coppergrid.accelerate.datagen.recipe.ASequencedAssemblyRecipeGen;
 import coppergrid.accelerate.datagen.recipe.processing.AProcessingRecipeGen;
 import net.minecraft.data.DataGenerator;
 
@@ -10,5 +11,6 @@ public class DataGen {
         GenRecipes.register();
         GenTags.register();
         gen.addProvider(AProcessingRecipeGen::registerAll);
+        gen.addProvider(ASequencedAssemblyRecipeGen::new);
     }
 }

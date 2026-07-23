@@ -16,11 +16,9 @@
         {
           "item": "accelerate:incomplete_high_speed_track"
         },
-        [
-          {
-            "tag": "accelerate:high_speed_concrete"
-          }
-        ]
+        {
+          "tag": "accelerate:high_speed_concrete"
+        }
       ],
       "results": [
         {
@@ -34,11 +32,9 @@
         {
           "item": "accelerate:incomplete_high_speed_track"
         },
-        [
-          {
-            "item": "minecraft:iron_ingot"
-          }
-        ]
+        {
+          "item": "minecraft:iron_ingot"
+        }
       ],
       "results": [
         {
