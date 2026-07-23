@@ -28,6 +28,7 @@ public class ABlocks {
             .tag(AllBlockTags.GIRDABLE_TRACKS.tag)
             .blockstate(new CustomTrackBlockStateGenerator("high_speed")::generate)
             .item(TrackBlockItem::new)
+            .model((context, provider) -> {})
             .lang("High Speed Track")
             .build()
             .register();
@@ -38,6 +39,7 @@ public class ABlocks {
 			.tag(AllBlockTags.GIRDABLE_TRACKS.tag)
             .blockstate(new CustomTrackBlockStateGenerator("maglev")::generate)
             .item(TrackBlockItem::new)
+            .model(((context, provider) -> {}))
             .lang("Maglev Track")
 			.build()
 			.register();
