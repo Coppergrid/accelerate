@@ -12,7 +12,7 @@ import com.simibubi.create.foundation.data.TagGen;
 import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.providers.RegistrateTagsProvider;
 
-public class GenTrackTags {
+public class GenTags {
     public static final TagKey<Item> COBALT_INGOTS = createItemTag("cobalt_ingots");
     public static final TagKey<Block> ACCELERATE_TRACKS = createBlockTag("track_items");
     public static final TagKey<Block> CREATE_TRACKS = createBlockTag("create", "tracks");
@@ -70,7 +70,7 @@ public class GenTrackTags {
 
     public static void register() {
         // Register block and item tag generators
-        Accelerate.REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, GenTrackTags::generateBlockTags);
-        Accelerate.REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, GenTrackTags::generateItemTags);
+        Accelerate.REGISTRATE.addDataGenerator(ProviderType.BLOCK_TAGS, GenTags::generateBlockTags);
+        Accelerate.REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, GenTags::generateItemTags);
     }
 }

@@ -8,7 +8,7 @@ public class DataGen {
     public static void register(DataGenerator.PackGenerator gen) {
         GenLang.register();
         GenRecipes.register();
-        GenTrackTags.register();
+        GenTags.register();
         gen.addProvider(AProcessingRecipeGen::registerAll);
     }
 }
