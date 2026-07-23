@@ -22,6 +22,7 @@ public abstract class AProcessingRecipeGen extends ARecipeProvider {
 
     public static DataProvider registerAll(PackOutput output) {
         GENERATORS.add(new AMixingRecipeGen(output));
+        GENERATORS.add(new ASplashingRecipeGen(output));
 
         return new DataProvider() {
 
