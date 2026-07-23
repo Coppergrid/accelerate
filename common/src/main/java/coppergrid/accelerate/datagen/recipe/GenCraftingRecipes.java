@@ -8,7 +8,9 @@ import coppergrid.accelerate.registry.AItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
@@ -47,6 +49,36 @@ public class GenCraftingRecipes {
                 .pattern("SCS")
                 .pattern("TDT")
                 .pattern("SCS")
+                .save(recipeProvider);
+
+        ShapedRecipeBuilder
+                .shaped(RecipeCategory.MISC, ABlocks.RAW_COBALT_BLOCK.asItem())
+                .unlockedBy("has_item", RecipeProvider.has(AItems.RAW_COBALT))
+                .define('R', AItems.RAW_COBALT)
+                .pattern("RRR")
+                .pattern("RRR")
+                .pattern("RRR")
+                .save(recipeProvider);
+
+        ShapelessRecipeBuilder
+                .shapeless(RecipeCategory.MISC, AItems.RAW_COBALT.asItem(), 9)
+                .unlockedBy("has_item", RecipeProvider.has(ABlocks.RAW_COBALT_BLOCK.asItem()))
+                .requires(ABlocks.RAW_COBALT_BLOCK.asItem())
+                .save(recipeProvider);
+
+        ShapedRecipeBuilder
+                .shaped(RecipeCategory.BUILDING_BLOCKS, ABlocks.COBALT_BLOCK.asItem())
+                .unlockedBy("has_item", RecipeProvider.has(AItems.COBALT_INGOT))
+                .define('C', AItems.COBALT_INGOT)
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .save(recipeProvider);
+
+        ShapelessRecipeBuilder
+                .shapeless(RecipeCategory.MISC, AItems.COBALT_INGOT.asItem(), 9)
+                .unlockedBy("has_item", RecipeProvider.has(ABlocks.COBALT_BLOCK.asItem()))
+                .requires(ABlocks.COBALT_BLOCK.asItem())
                 .save(recipeProvider);
     }
 }

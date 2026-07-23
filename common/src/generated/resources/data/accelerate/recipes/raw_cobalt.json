@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
     {
       "item": "accelerate:raw_cobalt_block"
     }
   ],
   "result": {
-    "item": "accelerate:raw_cobalt",
-    "count": 9
+    "count": 9,
+    "item": "accelerate:raw_cobalt"
   }
 }
