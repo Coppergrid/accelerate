@@ -3,6 +3,7 @@ package coppergrid.accelerate.datagen.recipe;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllItems;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
+import coppergrid.accelerate.Accelerate;
 import coppergrid.accelerate.registry.ABlocks;
 import coppergrid.accelerate.registry.AItems;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -58,13 +59,13 @@ public class GenCraftingRecipes {
                 .pattern("RRR")
                 .pattern("RRR")
                 .pattern("RRR")
-                .save(recipeProvider);
+                .save(recipeProvider, Accelerate.asResource("raw_cobalt_block_from_ore"));
 
         ShapelessRecipeBuilder
                 .shapeless(RecipeCategory.MISC, AItems.RAW_COBALT.asItem(), 9)
                 .unlockedBy("has_item", RecipeProvider.has(ABlocks.RAW_COBALT_BLOCK.asItem()))
                 .requires(ABlocks.RAW_COBALT_BLOCK.asItem())
-                .save(recipeProvider);
+                .save(recipeProvider, Accelerate.asResource("raw_cobalt_from_block"));
 
         ShapedRecipeBuilder
                 .shaped(RecipeCategory.BUILDING_BLOCKS, ABlocks.COBALT_BLOCK.asItem())
@@ -73,12 +74,12 @@ public class GenCraftingRecipes {
                 .pattern("CCC")
                 .pattern("CCC")
                 .pattern("CCC")
-                .save(recipeProvider);
+                .save(recipeProvider, Accelerate.asResource("cobalt_block_from_ingot"));
 
         ShapelessRecipeBuilder
                 .shapeless(RecipeCategory.MISC, AItems.COBALT_INGOT.asItem(), 9)
                 .unlockedBy("has_item", RecipeProvider.has(ABlocks.COBALT_BLOCK.asItem()))
                 .requires(ABlocks.COBALT_BLOCK.asItem())
-                .save(recipeProvider);
+                .save(recipeProvider, Accelerate.asResource("cobalt_ingot_from_block"));
     }
 }

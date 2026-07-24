@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "accelerate:cobalt_block"
+        "recipe": "accelerate:cobalt_block_from_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "accelerate:cobalt_block"
+      "accelerate:cobalt_block_from_ingot"
     ]
   },
   "sends_telemetry_event": false

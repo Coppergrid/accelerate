@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "accelerate:raw_cobalt"
+              "accelerate:cobalt_block"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "accelerate:raw_cobalt_block"
+        "recipe": "accelerate:cobalt_ingot_from_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "accelerate:raw_cobalt_block"
+      "accelerate:cobalt_ingot_from_block"
     ]
   },
   "sends_telemetry_event": false
