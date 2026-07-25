@@ -6,10 +6,16 @@ import coppergrid.accelerate.Accelerate;
 import coppergrid.accelerate.registry.AItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Items;
+import org.jetbrains.annotations.NotNull;
 
 public class ASplashingRecipeGen extends AProcessingRecipeGen {
     public ASplashingRecipeGen(PackOutput output) {
         super(output);
+    }
+
+    @Override
+    public @NotNull String getName() {
+        return "Accelerate's Splashing Recipes";
     }
 
     GeneratedRecipe

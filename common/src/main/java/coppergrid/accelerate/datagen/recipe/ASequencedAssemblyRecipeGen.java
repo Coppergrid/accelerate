@@ -11,12 +11,18 @@ import coppergrid.accelerate.registry.AItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Function;
 
 public class ASequencedAssemblyRecipeGen extends ARecipeProvider {
     public ASequencedAssemblyRecipeGen(PackOutput output) {
         super(output);
+    }
+
+    @Override
+    public @NotNull String getName() {
+        return "Accelerate's Sequenced Assembly Recipes";
     }
 
     protected GeneratedRecipe create(
