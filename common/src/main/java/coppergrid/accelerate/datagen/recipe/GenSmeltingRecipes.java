@@ -1,47 +1,44 @@
 package coppergrid.accelerate.datagen.recipe;
 
-import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import coppergrid.accelerate.Accelerate;
 import coppergrid.accelerate.registry.AItems;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
+import org.jetbrains.annotations.NotNull;
 
-import static com.tterrag.registrate.providers.RegistrateRecipeProvider.inventoryTrigger;
+public class GenSmeltingRecipes extends ARecipeProvider {
 
-public class GenSmeltingRecipes {
-    private static InventoryChangeTrigger.TriggerInstance unlockedByItem(ItemLike item) {
-        return inventoryTrigger(ItemPredicate.Builder.item().of(item).build());
+    public GenSmeltingRecipes(PackOutput output) {
+        super(output);
     }
 
-    private static InventoryChangeTrigger.TriggerInstance unlockedByItemTag(TagKey<Item> tag) {
-        return inventoryTrigger(ItemPredicate.Builder.item().of(tag).build());
+    @Override
+    public @NotNull String getName() {
+        return "Accelerate's Smelting Recipes";
     }
 
-    public static void generateRecipes(RegistrateRecipeProvider recipeProvider) {
+    ARecipeProvider.GeneratedRecipe COBALT_SMELTING = register(consumer ->
+            SimpleCookingRecipeBuilder.smelting(
+                            Ingredient.of(AItems.RAW_COBALT.get()),
+                            RecipeCategory.MISC,
+                            AItems.COBALT_INGOT,
+                            0.7f,
+                            200
+                    )
+                    .unlockedBy("has_item", RecipeProvider.has(AItems.RAW_COBALT))
+                    .save(consumer, Accelerate.asResource("cobalt_ingot_from_smelting")
+            ));
 
-        SimpleCookingRecipeBuilder.smelting(
-                Ingredient.of(AItems.RAW_COBALT.get()),
-                        RecipeCategory.MISC,
-                        AItems.COBALT_INGOT,
-                        0.7f,
-                        200
-                )
-                .unlockedBy("has_item", RecipeProvider.has(AItems.RAW_COBALT))
-                .save(recipeProvider, Accelerate.asResource("cobalt_ingot_from_smelting"));
-
-        SimpleCookingRecipeBuilder.blasting(
-                Ingredient.of(AItems.RAW_COBALT.get()),
-                        RecipeCategory.MISC,
-                        AItems.COBALT_INGOT,
-                        0.7f,
-                        100
-                )
-                .unlockedBy("has_item", RecipeProvider.has(AItems.RAW_COBALT))
-                .save(recipeProvider, Accelerate.asResource("cobalt_ingot_from_blasting"));
-    }
+    ARecipeProvider.GeneratedRecipe COBALT_BLASTING = register(consumer ->
+            SimpleCookingRecipeBuilder.blasting(
+                            Ingredient.of(AItems.RAW_COBALT.get()),
+                            RecipeCategory.MISC,
+                            AItems.COBALT_INGOT,
+                            0.7f,
+                            100
+                    )
+                    .unlockedBy("has_item", RecipeProvider.has(AItems.RAW_COBALT))
+                    .save(consumer, Accelerate.asResource("cobalt_ingot_from_blasting")
+                    ));
 }
