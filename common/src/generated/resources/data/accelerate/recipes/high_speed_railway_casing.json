@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "create:brass_sheet"
+    },
+    "C": {
+      "item": "create:copper_sheet"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "R": {
+      "item": "create:railway_casing"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "RPR",
+    "BBB"
+  ],
+  "result": {
+    "count": 2,
+    "item": "accelerate:high_speed_railway_casing"
+  },
+  "show_notification": true
+}

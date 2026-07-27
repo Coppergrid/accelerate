@@ -88,6 +88,33 @@ public class GenCraftingRecipes extends ARecipeProvider {
                     .requires(ABlocks.COBALT_BLOCK)
             );
 
+    GeneratedRecipe HIGH_SPEED_RAILWAY_CASING = create(ABlocks.HIGH_SPEED_RAILWAY_CASING, RecipeCategory.TRANSPORTATION)
+            .returns(2)
+            .unlockedBy(AllBlocks.RAILWAY_CASING)
+            .viaShaped(b -> b
+                    .define('B', AllItems.BRASS_SHEET)
+                    .define('C', AllItems.COPPER_SHEET)
+                    .define('P', AllItems.PRECISION_MECHANISM)
+                    .define('R', AllBlocks.RAILWAY_CASING)
+                    .pattern("CCC")
+                    .pattern("RPR")
+                    .pattern("BBB")
+            );
+
+    GeneratedRecipe MAGLEV_RAILWAY_CASING = create(ABlocks.MAGLEV_RAILWAY_CASING.asItem(), RecipeCategory.TRANSPORTATION)
+            .returns(2)
+            .unlockedBy(ABlocks.HIGH_SPEED_RAILWAY_CASING)
+            .viaShaped(b -> b
+                    .define('C', AllItems.COPPER_SHEET)
+                    .define('H', ABlocks.HIGH_SPEED_RAILWAY_CASING)
+                    .define('M', AItems.MAGNETIZED_COBALT_INGOT)
+                    .define('P', AllItems.PRECISION_MECHANISM)
+                    .define('T', AllItems.ELECTRON_TUBE)
+                    .pattern("TCT")
+                    .pattern("HPH")
+                    .pattern("MCM")
+            );
+
     protected class GeneratedRecipeBuilder {
 
         private final ItemLike result;
