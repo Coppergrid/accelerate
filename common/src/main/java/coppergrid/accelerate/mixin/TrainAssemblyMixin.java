@@ -44,11 +44,7 @@ public class TrainAssemblyMixin {
     private void accelerate$validateTrain(UUID playerUUID, CallbackInfo ci) {
         TrainType type = TrainTypeValidator.validate(bogeyTypes, bogeyCount);
 
-        Accelerate.LOGGER.info("Train assembly validation result: {}", type);
-
         if (type == null) {
-            Accelerate.LOGGER.info("Rejecting train due to mixed bogey types");
-
             exception(new AssemblyException(Component.translatable("error.accelerate.mixed_bogey_types")), -1);
 
             accelerate$pendingTrainType = null;
@@ -65,7 +61,6 @@ public class TrainAssemblyMixin {
         Train train = original.call(id, owner, graph, carriages, carriageSpacing, doubleEnded);
         if (accelerate$pendingTrainType != null) {
             TrainTypeStorage.set(train, accelerate$pendingTrainType);
-            Accelerate.LOGGER.info("Train created with type {}", accelerate$pendingTrainType);
             accelerate$pendingTrainType = null;
         }
         return train;
