@@ -10,6 +10,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
 
@@ -109,9 +110,9 @@ public class GenCraftingRecipes extends ARecipeProvider {
                     .define('H', ABlocks.HIGH_SPEED_RAILWAY_CASING)
                     .define('M', AItems.MAGNETIZED_COBALT_INGOT)
                     .define('P', AllItems.PRECISION_MECHANISM)
-                    .define('T', AllItems.ELECTRON_TUBE)
-                    .pattern("TCT")
-                    .pattern("HPH")
+                    .define('I', Items.BLUE_ICE)
+                    .pattern("HCH")
+                    .pattern("IPI")
                     .pattern("MCM")
             );
 

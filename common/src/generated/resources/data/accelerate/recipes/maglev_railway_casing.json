@@ -8,19 +8,19 @@
     "H": {
       "item": "accelerate:high_speed_railway_casing"
     },
+    "I": {
+      "item": "minecraft:blue_ice"
+    },
     "M": {
       "item": "accelerate:magnetized_cobalt_ingot"
     },
     "P": {
       "item": "create:precision_mechanism"
-    },
-    "T": {
-      "item": "create:electron_tube"
     }
   },
   "pattern": [
-    "TCT",
-    "HPH",
+    "HCH",
+    "IPI",
     "MCM"
   ],
   "result": {
