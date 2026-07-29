@@ -3,7 +3,6 @@
   "textures": {
     "0": "accelerate:block/high_speed_track",
     "1": "accelerate:block/high_speed_track_mip",
-    "2": "accelerate:block/high_speed_track_crossing",
     "particle": "accelerate:block/raw_cobalt_block"
   }
 }
