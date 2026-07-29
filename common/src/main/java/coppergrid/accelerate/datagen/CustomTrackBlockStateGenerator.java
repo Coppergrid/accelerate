@@ -6,7 +6,7 @@ import com.simibubi.create.foundation.data.SpecialBlockStateGen;
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
 
-import net.minecraft.resources.ResourceLocation;
+import coppergrid.accelerate.Accelerate;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import io.github.fabricators_of_create.porting_lib.models.generators.ModelFile; // FABRIC ONLY
@@ -38,7 +38,7 @@ public class CustomTrackBlockStateGenerator extends SpecialBlockStateGen {
             return prov.models()
                     .getExistingFile(prov.mcLoc("block/air"));
         return prov.models()
-                .getExistingFile(new ResourceLocation("accelerate","block/track/" + path + "/" + value.getModel()));
+                .getExistingFile(Accelerate.asResource("block/track/" + path + "/" + value.getModel()));
     }
 
 }
