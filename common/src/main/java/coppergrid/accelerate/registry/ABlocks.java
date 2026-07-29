@@ -4,9 +4,13 @@ import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.content.trains.bogey.BogeySizes;
 import com.simibubi.create.content.trains.track.TrackBlockItem;
 import com.simibubi.create.AllTags.AllBlockTags;
+import com.simibubi.create.content.trains.track.TrackModel;
 import com.simibubi.create.foundation.data.BuilderTransformers;
+import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import coppergrid.accelerate.content.bogey.MaglevBogeyBlock;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -23,6 +27,14 @@ public class ABlocks {
 
     // TRACK BLOCKS
     public static final BlockEntry<HighSpeedTrackBlock> HIGH_SPEED_TRACK_BLOCK = Accelerate.REGISTRATE.block("high_speed_track", HighSpeedTrackBlock::new)
+            .initialProperties(SharedProperties::stone)
+            .properties(p -> p
+                    .strength(0.8F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+                    .forceSolidOn())
+            .addLayer(() -> RenderType::cutoutMipped)
+            .onRegister(CreateRegistrate.blockModel(() -> TrackModel::new))
             .tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
             .tag(AllBlockTags.TRACKS.tag)
             .tag(AllBlockTags.GIRDABLE_TRACKS.tag)
@@ -34,6 +46,14 @@ public class ABlocks {
             .register();
 
     public static final BlockEntry<MaglevTrackBlock> MAGLEV_TRACK_BLOCK = Accelerate.REGISTRATE.block("maglev_track", MaglevTrackBlock::new)
+			.initialProperties(SharedProperties::stone)
+            .properties(p -> p
+                    .strength(0.8F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+                    .forceSolidOn())
+            .addLayer(() -> RenderType::cutoutMipped)
+            .onRegister(CreateRegistrate.blockModel(() -> TrackModel::new))
 			.tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
 			.tag(AllBlockTags.TRACKS.tag)
 			.tag(AllBlockTags.GIRDABLE_TRACKS.tag)
