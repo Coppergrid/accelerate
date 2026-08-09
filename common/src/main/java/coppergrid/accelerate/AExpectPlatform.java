@@ -1,9 +1,12 @@
 package coppergrid.accelerate;
 
 import com.tterrag.registrate.builders.BlockBuilder;
+import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
 import coppergrid.accelerate.content.bogey.HighSpeedBogeyBlock;
+import coppergrid.accelerate.content.bogey.HighSpeedBogeyBlockEntity;
 import coppergrid.accelerate.content.bogey.MaglevBogeyBlock;
+import coppergrid.accelerate.content.bogey.MaglevBogeyBlockEntity;
 import coppergrid.accelerate.content.track.HighSpeedTrackBlock;
 import coppergrid.accelerate.content.track.MaglevTrackBlock;
 import dev.architectury.injectables.annotations.ExpectPlatform;
@@ -40,6 +43,16 @@ public class AExpectPlatform {
 
     @ExpectPlatform
     public static <P> NonNullUnaryOperator<BlockBuilder<MaglevBogeyBlock, P>> maglevBogeyDatagen() {
+        throw new AssertionError();
+    }
+
+    @ExpectPlatform
+    public static BlockEntityEntry<HighSpeedBogeyBlockEntity> registerHighSpeedBogeyBlockEntity() {
+        throw new AssertionError();
+    }
+
+    @ExpectPlatform
+    public static BlockEntityEntry<MaglevBogeyBlockEntity> registerMaglevBogeyBlockEntity() {
         throw new AssertionError();
     }
 
