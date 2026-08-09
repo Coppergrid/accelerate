@@ -9,6 +9,7 @@ import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import coppergrid.accelerate.AExpectPlatform;
 import coppergrid.accelerate.content.bogey.MaglevBogeyBlock;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.BlockItem;
@@ -19,7 +20,6 @@ import coppergrid.accelerate.content.bogey.HighSpeedBogeyBlock;
 import coppergrid.accelerate.content.components.AutomatedDrivingModule;
 import coppergrid.accelerate.content.track.HighSpeedTrackBlock;
 import coppergrid.accelerate.content.track.MaglevTrackBlock;
-import coppergrid.accelerate.datagen.CustomTrackBlockStateGenerator;
 
 import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour.interactionBehaviour;
 
@@ -38,7 +38,7 @@ public class ABlocks {
             .tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
             .tag(AllBlockTags.TRACKS.tag)
             .tag(AllBlockTags.GIRDABLE_TRACKS.tag)
-            .blockstate(new CustomTrackBlockStateGenerator("high_speed")::generate)
+            .transform(AExpectPlatform.highSpeedTrackDatagen())
             .item(TrackBlockItem::new)
             .model((context, provider) -> {})
             .lang("High Speed Track")
@@ -57,7 +57,7 @@ public class ABlocks {
 			.tag(AllBlockTags.RELOCATION_NOT_SUPPORTED.tag)
 			.tag(AllBlockTags.TRACKS.tag)
 			.tag(AllBlockTags.GIRDABLE_TRACKS.tag)
-            .blockstate(new CustomTrackBlockStateGenerator("maglev")::generate)
+            .transform(AExpectPlatform.maglevTrackDatagen())
             .item(TrackBlockItem::new)
             .model(((context, provider) -> {}))
             .lang("Maglev Track")

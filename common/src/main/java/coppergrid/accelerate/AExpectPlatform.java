@@ -1,5 +1,9 @@
 package coppergrid.accelerate;
 
+import com.tterrag.registrate.builders.BlockBuilder;
+import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
+import coppergrid.accelerate.content.track.HighSpeedTrackBlock;
+import coppergrid.accelerate.content.track.MaglevTrackBlock;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 
 public class AExpectPlatform {
@@ -16,6 +20,17 @@ public class AExpectPlatform {
      * <p>
      * <a href="https://plugins.jetbrains.com/plugin/16210-architectury">You should also get the IntelliJ plugin to help with @ExpectPlatform.</a>
      */
+
+    @ExpectPlatform
+    public static <P> NonNullUnaryOperator<BlockBuilder<HighSpeedTrackBlock, P>> highSpeedTrackDatagen() {
+        throw new AssertionError();
+    }
+
+    @ExpectPlatform
+    public static <P> NonNullUnaryOperator<BlockBuilder<MaglevTrackBlock, P>> maglevTrackDatagen() {
+        throw new AssertionError();
+    }
+
     @ExpectPlatform
     public static String platformName() {
         // Just throw an error, the content should get replaced at runtime.

@@ -1,4 +1,4 @@
-package coppergrid.accelerate.datagen;
+package coppergrid.accelerate.fabric.datagen;
 
 import com.simibubi.create.content.trains.track.TrackBlock;
 import com.simibubi.create.content.trains.track.TrackShape;
