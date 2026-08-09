@@ -18,8 +18,6 @@ public class ABuilderTransformers {
                 .properties(p -> p.sound(SoundType.NETHERITE_BLOCK))
                 .properties(BlockBehaviour.Properties::noOcclusion)
                 .transform(pickaxeOnly())
-                .blockstate((c, p) -> BlockStateGen.horizontalAxisBlock(c, p, s -> p.models()
-                        .getExistingFile(p.modLoc("block/bogey/high_speed/top"))))
                 .loot((p, l) -> p.dropOther(l, ABlocks.HIGH_SPEED_RAILWAY_CASING.get()));
     }
 
@@ -28,8 +26,6 @@ public class ABuilderTransformers {
                 .properties(p -> p.sound(SoundType.NETHERITE_BLOCK))
                 .properties(BlockBehaviour.Properties::noOcclusion)
                 .transform(pickaxeOnly())
-                .blockstate((c, p) -> BlockStateGen.horizontalAxisBlock(c, p, s -> p.models()
-                        .getExistingFile(p.modLoc("block/bogey/maglev/top"))))
                 .loot((p, l) -> p.dropOther(l, ABlocks.MAGLEV_RAILWAY_CASING.get()));
     }
 }

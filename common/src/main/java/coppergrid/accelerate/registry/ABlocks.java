@@ -84,18 +84,22 @@ public class ABlocks {
     // BOGEY BLOCKS
     public static final BlockEntry<HighSpeedBogeyBlock> SMALL_HIGH_SPEED_BOGEY = Accelerate.REGISTRATE.block("small_high_speed_bogey", p -> new HighSpeedBogeyBlock(p, BogeySizes.SMALL))
             .transform(ABuilderTransformers.highSpeedBogey())
+            .transform(AExpectPlatform.highSpeedBogeyDatagen())
             .register();
 
     public static final BlockEntry<HighSpeedBogeyBlock> LARGE_HIGH_SPEED_BOGEY = Accelerate.REGISTRATE.block("large_high_speed_bogey", p -> new HighSpeedBogeyBlock(p, BogeySizes.LARGE))
             .transform(ABuilderTransformers.highSpeedBogey())
+            .transform(AExpectPlatform.highSpeedBogeyDatagen())
             .register();
 
     public static final BlockEntry<MaglevBogeyBlock> SMALL_MAGLEV_BOGEY = Accelerate.REGISTRATE.block("small_maglev_bogey", p -> new MaglevBogeyBlock(p, BogeySizes.SMALL))
             .transform(ABuilderTransformers.maglevBogey())
+            .transform(AExpectPlatform.maglevBogeyDatagen())
             .register();
 
     public static final BlockEntry<MaglevBogeyBlock> LARGE_MAGLEV_BOGEY = Accelerate.REGISTRATE.block("large_maglev_bogey", p -> new MaglevBogeyBlock(p, BogeySizes.LARGE))
             .transform(ABuilderTransformers.maglevBogey())
+            .transform(AExpectPlatform.maglevBogeyDatagen())
             .register();
 
     // STANDARD BLOCKS
