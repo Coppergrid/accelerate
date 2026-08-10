@@ -1,4 +1,5 @@
 {
+  "parent": "accelerate:root",
   "criteria": {
     "has_high_speed_track": {
       "conditions": {
@@ -15,7 +16,6 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "accelerate:textures/block/cobalt_block.png",
     "description": {
       "translate": "advancement.accelerate.high_speed_track.description"
     },

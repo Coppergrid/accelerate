@@ -1,5 +1,6 @@
 package coppergrid.accelerate.datagen.advancement;
 
+import com.simibubi.create.AllBlocks;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.network.chat.Component;
@@ -13,14 +14,29 @@ import java.util.function.Consumer;
 public class AdvancementGen {
     public static void generate(Consumer<Advancement> consumer) {
 
+        // ROOT (Tab name)
+        Advancement root = Advancement.Builder.advancement()
+                .display(
+                        AllBlocks.TRACK.asItem(),
+                        Component.translatable("advancement.accelerate.root.title"),
+                        Component.translatable("advancement.accelerate.root.description"),
+                        Accelerate.asResource("textures/block/cobalt_block.png"),
+                        FrameType.TASK,
+                        false, false, true
+                )
+                .addCriterion("has_track",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(AllBlocks.TRACK.asItem())
+                )
+                .build(Accelerate.asResource("root"));
+
         // HIGH SPEED TRACK
         Advancement high_speed_track = Advancement.Builder.advancement()
-//                .parent(new ResourceLocation("create", "track_0")) // I will add this back once it stops breaking everything and I figure out how to do it
+                .parent(root)
                 .display(
                         ABlocks.HIGH_SPEED_TRACK_BLOCK.asItem(),
                         Component.translatable("advancement.accelerate.high_speed_track.title"),
                         Component.translatable("advancement.accelerate.high_speed_track.description"),
-                        Accelerate.asResource("textures/block/cobalt_block.png"),
+                        null,
                         FrameType.GOAL,
                         true, true, false
                 )
@@ -77,6 +93,7 @@ public class AdvancementGen {
                 .build(Accelerate.asResource("maglev_track"));
 
         // REGISTER
+        consumer.accept(root);
         consumer.accept(high_speed_track);
         consumer.accept(cobalt_ingot);
         consumer.accept(magnetized_cobalt_ingot);

@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_track": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:track"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "accelerate:textures/block/cobalt_block.png",
+    "description": {
+      "translate": "advancement.accelerate.root.description"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "create:track"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancement.accelerate.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_track"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
