@@ -2,6 +2,9 @@
   "tag.accelerate.high_speed_concrete": "High Speed Concrete",
   "tag.accelerate.cobalt_ingots": "Cobalt Ingots",
 
+  "advancement.accelerate.root.title": "Create: Accelerate",
+  "advancement.accelerate.root.description": "Your railway technology expansion starts here",
+
   "advancement.accelerate.high_speed_track.title": "Accelerating Onward",
   "advancement.accelerate.high_speed_track.description": "Obtain a high speed track",
   "advancement.accelerate.cobalt_ingot.title": "Forging Ahead",
