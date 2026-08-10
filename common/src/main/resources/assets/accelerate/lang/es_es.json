@@ -8,6 +8,8 @@
   "advancement.accelerate.maglev_track.title": "Más Allá de los Raíles",
   "advancement.accelerate.magnetized_cobalt_ingot.description": "Magnetiza el cobalto con un quemador de blaze",
   "advancement.accelerate.magnetized_cobalt_ingot.title": "¡IMANES!",
+  "advancement.accelerate.root.description": "Su expansión de tecnología ferroviaria empieza aquí",
+  "advancement.accelerate.root.title": "Create: Accelerate",
   "block.accelerate.automated_driving_module": "Módulo de Conducción Autónoma",
   "block.accelerate.cobalt_block": "Bloque de Cobalto",
   "block.accelerate.high_speed_railway_casing": "Revestimiento de Tren de Alta Velocidad",
