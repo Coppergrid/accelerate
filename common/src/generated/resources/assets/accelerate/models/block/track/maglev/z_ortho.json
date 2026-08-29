@@ -1,0 +1,9 @@
+{
+  "parent": "create:block/track/z_ortho",
+  "textures": {
+    "1": "accelerate:block/maglev_track",
+    "2": "accelerate:block/maglev_track_mip",
+    "3": "accelerate:block/maglev_track_crossing",
+    "particle": "accelerate:block/raw_cobalt_block"
+  }
+}
