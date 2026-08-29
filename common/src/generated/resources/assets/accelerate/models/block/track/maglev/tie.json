@@ -1,0 +1,8 @@
+{
+  "parent": "create:block/track/tie",
+  "textures": {
+    "0": "accelerate:block/maglev_track",
+    "1": "accelerate:block/maglev_track_mip",
+    "particle": "accelerate:block/raw_cobalt_block"
+  }
+}
