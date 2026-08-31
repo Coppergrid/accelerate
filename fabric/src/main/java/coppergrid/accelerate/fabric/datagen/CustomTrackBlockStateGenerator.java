@@ -98,21 +98,19 @@ public class CustomTrackBlockStateGenerator extends SpecialBlockStateGen {
     private void generateTrackSegments(RegistrateBlockstateProvider prov) {
         String prefix = "block/track/" + path + "/";
 
-        for (String part : new String[]{"segment_left", "segment_right"}) {
-            prov.models()
-                    .withExistingParent(prefix + part, Create.asResource("block/track/" + part))
+        for (String part : new String[]{"segment_left", "segment_right", "tie"}) {
+            BlockModelBuilder model = prov.models()
+                    .withExistingParent(
+                            prefix + part,
+                            Create.asResource("block/track/" + part)
+                    )
                     .texture("0", Accelerate.asResource("block/" + path + "_track"))
                     .texture("1", Accelerate.asResource("block/" + path + "_track_mip"))
                     .texture("particle", Accelerate.asResource("block/raw_cobalt_block"));
-        }
 
-        for (String part : new String[]{"tie"}) {
-            prov.models()
-                    .withExistingParent(prefix + part, Create.asResource("block/track/" + part))
-                    .renderType(new ResourceLocation("minecraft", "cutout_mipped"))
-                    .texture("0", Accelerate.asResource("block/" + path + "_track"))
-                    .texture("1", Accelerate.asResource("block/" + path + "_track_mip"))
-                    .texture("particle", Accelerate.asResource("block/raw_cobalt_block"));
+            if (part.equals("tie")) {
+                model.renderType(new ResourceLocation("minecraft", "cutout_mipped"));
+            }
         }
     }
 
