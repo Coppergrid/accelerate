@@ -8,6 +8,8 @@ import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
 
 import coppergrid.accelerate.Accelerate;
+import net.minecraft.client.Minecraft;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import io.github.fabricators_of_create.porting_lib.models.generators.ModelFile; // FABRIC ONLY
@@ -96,9 +98,18 @@ public class CustomTrackBlockStateGenerator extends SpecialBlockStateGen {
     private void generateTrackSegments(RegistrateBlockstateProvider prov) {
         String prefix = "block/track/" + path + "/";
 
-        for (String part : new String[]{"segment_left", "segment_right", "tie"}) {
+        for (String part : new String[]{"segment_left", "segment_right"}) {
             prov.models()
                     .withExistingParent(prefix + part, Create.asResource("block/track/" + part))
+                    .texture("0", Accelerate.asResource("block/" + path + "_track"))
+                    .texture("1", Accelerate.asResource("block/" + path + "_track_mip"))
+                    .texture("particle", Accelerate.asResource("block/raw_cobalt_block"));
+        }
+
+        for (String part : new String[]{"tie"}) {
+            prov.models()
+                    .withExistingParent(prefix + part, Create.asResource("block/track/" + part))
+                    .renderType(new ResourceLocation("minecraft", "cutout_mipped"))
                     .texture("0", Accelerate.asResource("block/" + path + "_track"))
                     .texture("1", Accelerate.asResource("block/" + path + "_track_mip"))
                     .texture("particle", Accelerate.asResource("block/raw_cobalt_block"));
